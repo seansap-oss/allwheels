@@ -1,11 +1,28 @@
 import Link from "next/link";
-import { categories, manufacturers, vehicleModels } from "@/lib/store";
+import { catalogStats, categories, manufacturers, vehicleModels } from "@/lib/store";
 
 export default function AdminCatalog() {
+  const stats = catalogStats();
+  const rows: [string, { manufacturers: number; models: number; variants: number }][] = [
+    ["Cars", stats.cars],
+    ["Motorcycles", stats.motorcycles],
+    ["Scooters", stats.scooters],
+    ["Electric", stats.electric],
+    ["Commercial", stats.commercial],
+    ["Bicycles", stats.bicycles],
+  ];
   return (
     <div>
       <h1 className="text-2xl font-black text-navy-950">Catalogue engine</h1>
-      <p className="mb-4 mt-1 text-sm text-slate-600">Unlimited categories, brands, models and variants — no code changes needed.</p>
+      <p className="mb-4 mt-1 text-sm text-slate-600">Unlimited categories, brands, models and variants — no code changes needed. Counts read live from the database.</p>
+      <div className="mb-4 grid grid-cols-2 gap-3 lg:grid-cols-3">
+        {rows.map(([k, v]) => (
+          <div key={k} className="rounded-2xl border border-slate-200 bg-white p-4 text-sm">
+            <p className="font-extrabold text-navy-950">{k}</p>
+            <p className="mt-1 text-slate-600">Manufacturers: <strong>{v.manufacturers}</strong> · Models: <strong>{v.models}</strong> · Variants: <strong>{v.variants}</strong></p>
+          </div>
+        ))}
+      </div>
       <div className="grid gap-4 lg:grid-cols-3">
         <div className="rounded-2xl border border-slate-200 bg-white p-5">
           <h2 className="font-extrabold">Manufacturers ({manufacturers.length})</h2>

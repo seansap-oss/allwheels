@@ -5,7 +5,7 @@
     "categorySlug": "motorcycles", "subcategorySlug": "classic",
     "manufacturerId": "m-re", "manufacturerName": "Royal Enfield",
     "modelId": "md-classic350", "modelName": "Classic 350",
-    "variantId": null, "variantName": "Halcyon Green",
+    "variantId": "v-classic-halcyon", "variantName": "Halcyon Green",
     "year": 2023, "price": 178000, "condition": "USED",
     "sellerType": "PRIVATE", "sellerId": "u-seller1", "sellerName": "Thangjam R.",
     "dealerId": null, "city": "Imphal", "state": "Manipur", "locality": "Uripok",
@@ -14,8 +14,8 @@
     "views": 1243, "saves": 86, "createdAt": "2026-08-20T10:00:00Z", "updatedAt": "2026-08-28T10:00:00Z",
     "description": "Single owner Classic 350 in excellent condition. Always serviced at authorised centre. New tyres, zero-accident, all papers clear with Manipur registration.",
     "media": [
-      { "id": "l1m1", "url": "/images/seed/bike-1.svg", "thumbUrl": "/images/seed/bike-1.svg", "kind": "IMAGE", "sort": 1 },
-      { "id": "l1m2", "url": "/images/seed/bike-2.svg", "thumbUrl": "/images/seed/bike-2.svg", "kind": "IMAGE", "sort": 2 }
+      { "id": "l1m1", "url": "/images/vehicles/bike-green.svg", "thumbUrl": "/images/vehicles/bike-green.svg", "kind": "IMAGE", "sort": 1 },
+      { "id": "l1m2", "url": "/images/vehicles/bike-black.svg", "thumbUrl": "/images/vehicles/bike-black.svg", "kind": "IMAGE", "sort": 2 }
     ],
     "specs": { "Power": "20.2 PS", "Torque": "27 Nm", "ABS": "Dual channel", "Owners": 1 }
   },
@@ -25,7 +25,7 @@
     "categorySlug": "cars", "subcategorySlug": "suv",
     "manufacturerId": "m-mahindra", "manufacturerName": "Mahindra",
     "modelId": "md-scorpio", "modelName": "Scorpio N",
-    "variantId": null, "variantName": "Z8L Diesel AT 4WD",
+    "variantId": "v-scorpio-z8l", "variantName": "Z8L Diesel AT 4WD",
     "year": 2022, "price": 2150000, "condition": "USED",
     "sellerType": "DEALER", "sellerId": "u-dealer1", "sellerName": "Imphal Motors",
     "dealerId": "d1", "city": "New Delhi", "state": "Delhi", "locality": "Karol Bagh",
@@ -34,37 +34,38 @@
     "views": 3421, "saves": 210, "createdAt": "2026-08-18T10:00:00Z", "updatedAt": "2026-08-29T10:00:00Z",
     "description": "Top-end Z8L diesel automatic 4WD. Company maintained, full service history, insurance valid. Finance and exchange available.",
     "media": [
-      { "id": "l2m1", "url": "/images/seed/car-1.svg", "thumbUrl": "/images/seed/car-1.svg", "kind": "IMAGE", "sort": 1 },
-      { "id": "l2m2", "url": "/images/seed/car-2.svg", "thumbUrl": "/images/seed/car-2.svg", "kind": "IMAGE", "sort": 2 }
+      { "id": "l2m1", "url": "/images/vehicles/suv-black.svg", "thumbUrl": "/images/vehicles/suv-black.svg", "kind": "IMAGE", "sort": 1 },
+      { "id": "l2m2", "url": "/images/vehicles/suv-blue.svg", "thumbUrl": "/images/vehicles/suv-blue.svg", "kind": "IMAGE", "sort": 2 }
     ],
     "specs": { "Power": "172 PS", "Drive": "4WD", "Seats": 7, "Owners": 1 }
   },
   {
     "id": "l3", "slug": "2024-ather-450x-bengaluru-10003",
-    "title": "2024 Ather 450X Gen 4 HR",
+    "title": "2024 Ather 450X HR — 105 km True Range",
     "categorySlug": "scooters", "subcategorySlug": "electric-scooter",
     "manufacturerId": "m-ather", "manufacturerName": "Ather",
     "modelId": "md-450x", "modelName": "450X",
-    "variantId": null, "variantName": "450X HR",
+    "variantId": "v-450x-hr", "variantName": "HR 3.7 kWh",
     "year": 2024, "price": 142000, "condition": "USED",
     "sellerType": "PRIVATE", "sellerId": "u-seller2", "sellerName": "Priya S.",
     "dealerId": null, "city": "Bengaluru", "state": "Karnataka", "locality": "HSR Layout",
     "kms": 4200, "fuel": "ELECTRIC", "transmission": "AUTOMATIC", "engineCc": null,
-    "color": "White", "featured": false, "verifiedSeller": true, "status": "ACTIVE",
+    "color": "White", "featured": true, "verifiedSeller": true, "status": "ACTIVE",
     "views": 876, "saves": 54, "createdAt": "2026-08-25T10:00:00Z", "updatedAt": "2026-08-30T10:00:00Z",
-    "description": "Barely used 450X with 105 km true range. Battery health 100%, Rizta charger included. Selling due to relocation.",
+    "description": "Barely used 450X with 105 km true range. Battery health 100%, home charger included. Selling due to relocation.",
     "media": [
-      { "id": "l3m1", "url": "/images/seed/scooter-1.svg", "thumbUrl": "/images/seed/scooter-1.svg", "kind": "IMAGE", "sort": 1 }
+      { "id": "l3m1", "url": "/images/vehicles/ev-blue.svg", "thumbUrl": "/images/vehicles/ev-blue.svg", "kind": "IMAGE", "sort": 1 },
+      { "id": "l3m2", "url": "/images/vehicles/scooter-blue.svg", "thumbUrl": "/images/vehicles/scooter-blue.svg", "kind": "IMAGE", "sort": 2 }
     ],
-    "specs": { "Range": "105 km", "Top speed": "90 km/h", "Charging": "0-80% in 4h" }
+    "specs": { "Range": "105 km true", "Top speed": "90 km/h", "Charging": "0-80% in 4h" }
   },
   {
     "id": "l4", "slug": "2021-hero-splendor-plus-imphal-10004",
-    "title": "2021 Hero Splendor Plus - First Owner",
+    "title": "2021 Hero Splendor Plus - First Owner, 70 kmpl",
     "categorySlug": "motorcycles", "subcategorySlug": "commuter",
-    "manufacturerId": "m-hero", "manufacturerName": "Hero",
+    "manufacturerId": "m-hero", "manufacturerName": "Hero MotoCorp",
     "modelId": "md-splendor", "modelName": "Splendor Plus",
-    "variantId": null, "variantName": "Self Start i3S",
+    "variantId": "v-splendor-std", "variantName": "STD",
     "year": 2021, "price": 62000, "condition": "USED",
     "sellerType": "PRIVATE", "sellerId": "u-seller1", "sellerName": "Thangjam R.",
     "dealerId": null, "city": "Imphal", "state": "Manipur", "locality": "Singjamei",
@@ -73,17 +74,17 @@
     "views": 432, "saves": 12, "createdAt": "2026-08-22T10:00:00Z", "updatedAt": "2026-08-27T10:00:00Z",
     "description": "Daily runner, mileage 70+ kmpl. New chain-sprocket, serviced last month. Price slightly negotiable.",
     "media": [
-      { "id": "l4m1", "url": "/images/seed/bike-2.svg", "thumbUrl": "/images/seed/bike-2.svg", "kind": "IMAGE", "sort": 1 }
+      { "id": "l4m1", "url": "/images/vehicles/bike-black.svg", "thumbUrl": "/images/vehicles/bike-black.svg", "kind": "IMAGE", "sort": 1 }
     ],
     "specs": { "Mileage": "70 kmpl", "Owners": 1 }
   },
   {
     "id": "l5", "slug": "2023-ktm-200-duke-pune-10005",
-    "title": "2023 KTM 200 Duke - Showroom Condition",
+    "title": "2023 KTM 200 Duke - Dealer Certified + Warranty",
     "categorySlug": "motorcycles", "subcategorySlug": "sports",
     "manufacturerId": "m-ktm", "manufacturerName": "KTM",
     "modelId": "md-duke200", "modelName": "200 Duke",
-    "variantId": null, "variantName": "2023",
+    "variantId": "v-duke200-std", "variantName": "STD",
     "year": 2023, "price": 168000, "condition": "USED",
     "sellerType": "DEALER", "sellerId": "u-dealer1", "sellerName": "Imphal Motors",
     "dealerId": "d1", "city": "Pune", "state": "Maharashtra", "locality": "Baner",
@@ -92,13 +93,13 @@
     "views": 1502, "saves": 98, "createdAt": "2026-08-15T10:00:00Z", "updatedAt": "2026-08-26T10:00:00Z",
     "description": "Dealer-certified 200 Duke with 6-month engine warranty. All services at KTM centre. Exchange facility available.",
     "media": [
-      { "id": "l5m1", "url": "/images/seed/bike-1.svg", "thumbUrl": "/images/seed/bike-1.svg", "kind": "IMAGE", "sort": 1 }
+      { "id": "l5m1", "url": "/images/vehicles/bike-orange.svg", "thumbUrl": "/images/vehicles/bike-orange.svg", "kind": "IMAGE", "sort": 1 }
     ],
     "specs": { "Power": "25 PS", "ABS": "Dual channel", "Owners": 1 }
   },
   {
     "id": "l6", "slug": "2025-firefox-target-mumbai-10006",
-    "title": "2025 Firefox Target 29er MTB",
+    "title": "2025 Firefox Target 29er MTB - Brand New",
     "categorySlug": "bicycles", "subcategorySlug": "mountain",
     "manufacturerId": "m-firefox", "manufacturerName": "Firefox",
     "modelId": "md-target", "modelName": "Target",
@@ -111,17 +112,17 @@
     "views": 210, "saves": 9, "createdAt": "2026-08-28T10:00:00Z", "updatedAt": "2026-08-31T10:00:00Z",
     "description": "Brand new 29er MTB with Shimano 21-speed, dual disc brakes and front suspension. Free first service and helmet.",
     "media": [
-      { "id": "l6m1", "url": "/images/seed/cycle-1.svg", "thumbUrl": "/images/seed/cycle-1.svg", "kind": "IMAGE", "sort": 1 }
+      { "id": "l6m1", "url": "/images/vehicles/cycle-blue.svg", "thumbUrl": "/images/vehicles/cycle-blue.svg", "kind": "IMAGE", "sort": 1 }
     ],
     "specs": { "Wheel": "29 inch", "Gears": "21 speed", "Brakes": "Dual disc" }
   },
   {
     "id": "l7", "slug": "2020-maruti-swift-chennai-10007",
-    "title": "2020 Maruti Swift VXi - Single Owner",
+    "title": "2020 Maruti Swift VXi - Single Owner, TN Registered",
     "categorySlug": "cars", "subcategorySlug": "hatchback",
     "manufacturerId": "m-maruti", "manufacturerName": "Maruti Suzuki",
     "modelId": "md-swift", "modelName": "Swift",
-    "variantId": null, "variantName": "VXi",
+    "variantId": "v-swift-vxi", "variantName": "VXi",
     "year": 2020, "price": 565000, "condition": "USED",
     "sellerType": "PRIVATE", "sellerId": "u-seller2", "sellerName": "Priya S.",
     "dealerId": null, "city": "Chennai", "state": "Tamil Nadu", "locality": "Velachery",
@@ -130,27 +131,371 @@
     "views": 987, "saves": 41, "createdAt": "2026-08-12T10:00:00Z", "updatedAt": "2026-08-24T10:00:00Z",
     "description": "Single-owner Swift, non-accidental, TN registered. AC, power steering, music system all working. Insurance till next year.",
     "media": [
-      { "id": "l7m1", "url": "/images/seed/car-2.svg", "thumbUrl": "/images/seed/car-2.svg", "kind": "IMAGE", "sort": 1 }
+      { "id": "l7m1", "url": "/images/vehicles/hatch-red.svg", "thumbUrl": "/images/vehicles/hatch-red.svg", "kind": "IMAGE", "sort": 1 }
     ],
     "specs": { "Mileage": "22 kmpl", "Owners": 1, "Seats": 5 }
   },
   {
     "id": "l8", "slug": "2024-ola-s1-pro-jaipur-10008",
-    "title": "2024 Ola S1 Pro Gen 2",
+    "title": "2024 Ola S1 Pro Gen 3 - Under Warranty",
     "categorySlug": "scooters", "subcategorySlug": "electric-scooter",
     "manufacturerId": "m-ola", "manufacturerName": "Ola Electric",
     "modelId": "md-s1pro", "modelName": "S1 Pro",
-    "variantId": null, "variantName": "Gen 2",
+    "variantId": "v-s1pro-gen3", "variantName": "Gen 3 4 kWh",
     "year": 2024, "price": 118000, "condition": "USED",
     "sellerType": "PRIVATE", "sellerId": "u-seller1", "sellerName": "Thangjam R.",
     "dealerId": null, "city": "Jaipur", "state": "Rajasthan", "locality": "Malviya Nagar",
     "kms": 6500, "fuel": "ELECTRIC", "transmission": "AUTOMATIC", "engineCc": null,
     "color": "Black", "featured": false, "verifiedSeller": false, "status": "PENDING",
     "views": 55, "saves": 3, "createdAt": "2026-09-01T10:00:00Z", "updatedAt": "2026-09-02T10:00:00Z",
-    "description": "Ola S1 Pro Gen 2 with 195 km IDC range. Under warranty, free MoveOS updates. Awaiting moderation approval.",
+    "description": "Ola S1 Pro Gen 3, under warranty with free MoveOS updates. Awaiting moderation approval.",
     "media": [
-      { "id": "l8m1", "url": "/images/seed/scooter-1.svg", "thumbUrl": "/images/seed/scooter-1.svg", "kind": "IMAGE", "sort": 1 }
+      { "id": "l8m1", "url": "/images/vehicles/ev-blue.svg", "thumbUrl": "/images/vehicles/ev-blue.svg", "kind": "IMAGE", "sort": 1 }
     ],
     "specs": { "Range": "195 km IDC", "Top speed": "120 km/h" }
+  },
+  {
+    "id": "l9", "slug": "2023-hyundai-creta-diesel-kochi-10009",
+    "title": "2023 Hyundai Creta SX(O) Diesel AT - Top Variant",
+    "categorySlug": "cars", "subcategorySlug": "suv",
+    "manufacturerId": "m-hyundai", "manufacturerName": "Hyundai",
+    "modelId": "md-creta", "modelName": "Creta",
+    "variantId": "v-creta-sxo", "variantName": "SX(O) Diesel AT",
+    "year": 2023, "price": 1795000, "condition": "USED",
+    "sellerType": "PRIVATE", "sellerId": "u-seller2", "sellerName": "Priya S.",
+    "dealerId": null, "city": "Kochi", "state": "Kerala", "locality": "Edappally",
+    "kms": 28000, "fuel": "DIESEL", "transmission": "AUTOMATIC", "engineCc": 1493,
+    "color": "White", "featured": true, "verifiedSeller": true, "status": "ACTIVE",
+    "views": 1876, "saves": 132, "createdAt": "2026-08-19T10:00:00Z", "updatedAt": "2026-08-29T10:00:00Z",
+    "description": "Top-spec diesel automatic with ventilated seats, Bose audio and 360 camera. Service history at Hyundai ASS. KL registered, two keys.",
+    "media": [
+      { "id": "l9m1", "url": "/images/vehicles/suv-blue.svg", "thumbUrl": "/images/vehicles/suv-blue.svg", "kind": "IMAGE", "sort": 1 },
+      { "id": "l9m2", "url": "/images/vehicles/suv-red.svg", "thumbUrl": "/images/vehicles/suv-red.svg", "kind": "IMAGE", "sort": 2 }
+    ],
+    "specs": { "Power": "116 PS", "Seats": 5, "Owners": 1, "Sunroof": "Panoramic" }
+  },
+  {
+    "id": "l10", "slug": "2022-tata-nexon-ev-hyderabad-10010",
+    "title": "2022 Tata Nexon EV Empowered+ 45 kWh",
+    "categorySlug": "cars", "subcategorySlug": "suv",
+    "manufacturerId": "m-tata", "manufacturerName": "Tata",
+    "modelId": "md-nexonev", "modelName": "Nexon EV",
+    "variantId": "v-nexonev-empowered", "variantName": "Empowered+ 45 kWh",
+    "year": 2022, "price": 1395000, "condition": "USED",
+    "sellerType": "DEALER", "sellerId": "u-dealer1", "sellerName": "Imphal Motors",
+    "dealerId": "d1", "city": "Hyderabad", "state": "Telangana", "locality": "Kukatpally",
+    "kms": 35000, "fuel": "ELECTRIC", "transmission": "AUTOMATIC", "engineCc": null,
+    "color": "Blue", "featured": false, "verifiedSeller": true, "status": "ACTIVE",
+    "views": 1104, "saves": 77, "createdAt": "2026-08-16T10:00:00Z", "updatedAt": "2026-08-27T10:00:00Z",
+    "description": "Battery SOH 94% with report. Fast-charging supported, 7.2 kW home charger included. Dealer warranty on battery for 1 year.",
+    "media": [
+      { "id": "l10m1", "url": "/images/vehicles/suv-blue.svg", "thumbUrl": "/images/vehicles/suv-blue.svg", "kind": "IMAGE", "sort": 1 }
+    ],
+    "specs": { "Range": "325 km MIDC", "Battery": "45 kWh", "Owners": 1 }
+  },
+  {
+    "id": "l11", "slug": "2021-honda-city-lucknow-10011",
+    "title": "2021 Honda City V Petrol MT - Honda Service History",
+    "categorySlug": "cars", "subcategorySlug": "sedan",
+    "manufacturerId": "m-honda-c", "manufacturerName": "Honda",
+    "modelId": "md-city", "modelName": "City",
+    "variantId": "v-city-v", "variantName": "V",
+    "year": 2021, "price": 925000, "condition": "USED",
+    "sellerType": "PRIVATE", "sellerId": "u-seller1", "sellerName": "Thangjam R.",
+    "dealerId": null, "city": "Lucknow", "state": "Uttar Pradesh", "locality": "Gomti Nagar",
+    "kms": 41000, "fuel": "PETROL", "transmission": "MANUAL", "engineCc": 1498,
+    "color": "Silver", "featured": false, "verifiedSeller": false, "status": "ACTIVE",
+    "views": 643, "saves": 28, "createdAt": "2026-08-14T10:00:00Z", "updatedAt": "2026-08-25T10:00:00Z",
+    "description": "Refined i-VTEC sedan, complete Honda service history. New Apollo tyres, zero dep insurance. UP registered.",
+    "media": [
+      { "id": "l11m1", "url": "/images/vehicles/sedan-silver.svg", "thumbUrl": "/images/vehicles/sedan-silver.svg", "kind": "IMAGE", "sort": 1 }
+    ],
+    "specs": { "Power": "121 PS", "Mileage": "17.8 kmpl", "Owners": 2 }
+  },
+  {
+    "id": "l12", "slug": "2024-tvs-jupiter-125-guwahati-10012",
+    "title": "2024 TVS Jupiter 125 Disc - Showroom Condition",
+    "categorySlug": "scooters", "subcategorySlug": "petrol-scooter",
+    "manufacturerId": "m-tvs", "manufacturerName": "TVS",
+    "modelId": "md-jupiter", "modelName": "Jupiter 125",
+    "variantId": "v-jupiter125-disc", "variantName": "Disc",
+    "year": 2024, "price": 82000, "condition": "USED",
+    "sellerType": "PRIVATE", "sellerId": "u-seller2", "sellerName": "Priya S.",
+    "dealerId": null, "city": "Guwahati", "state": "Assam", "locality": "Ganesguri",
+    "kms": 5200, "fuel": "PETROL", "transmission": "AUTOMATIC", "engineCc": 124,
+    "color": "Blue", "featured": false, "verifiedSeller": true, "status": "ACTIVE",
+    "views": 389, "saves": 21, "createdAt": "2026-08-23T10:00:00Z", "updatedAt": "2026-08-30T10:00:00Z",
+    "description": "Hardly used Jupiter 125 with front disc and large under-seat storage. First service done, Assam registered.",
+    "media": [
+      { "id": "l12m1", "url": "/images/vehicles/scooter-blue.svg", "thumbUrl": "/images/vehicles/scooter-blue.svg", "kind": "IMAGE", "sort": 1 }
+    ],
+    "specs": { "Mileage": "50 kmpl", "Storage": "33 L", "Owners": 1 }
+  },
+  {
+    "id": "l13", "slug": "2022-yamaha-r15-v4-dimapur-10013",
+    "title": "2022 Yamaha R15 V4 - Track Ready, New Tyres",
+    "categorySlug": "motorcycles", "subcategorySlug": "sports",
+    "manufacturerId": "m-yamaha", "manufacturerName": "Yamaha",
+    "modelId": "md-r15", "modelName": "R15 V4",
+    "variantId": "v-r15-v4", "variantName": "Metallic Grey",
+    "year": 2022, "price": 152000, "condition": "USED",
+    "sellerType": "PRIVATE", "sellerId": "u-seller1", "sellerName": "Thangjam R.",
+    "dealerId": null, "city": "Dimapur", "state": "Nagaland", "locality": "Signal Basti",
+    "kms": 14000, "fuel": "PETROL", "transmission": "MANUAL", "engineCc": 155,
+    "color": "Grey", "featured": false, "verifiedSeller": false, "status": "ACTIVE",
+    "views": 731, "saves": 49, "createdAt": "2026-08-17T10:00:00Z", "updatedAt": "2026-08-26T10:00:00Z",
+    "description": "VVA supersport with quickshifter. Fresh MRF rubber, chain lubed every 500 km. Never dropped, Nagaland registered.",
+    "media": [
+      { "id": "l13m1", "url": "/images/vehicles/bike-blue.svg", "thumbUrl": "/images/vehicles/bike-blue.svg", "kind": "IMAGE", "sort": 1 }
+    ],
+    "specs": { "Power": "18.4 PS", "ABS": "Dual channel", "Owners": 1 }
+  },
+  {
+    "id": "l14", "slug": "2023-bajaj-pulsar-ns400z-shillong-10014",
+    "title": "2023 Bajaj Pulsar NS400Z - Biggest Pulsar Ever",
+    "categorySlug": "motorcycles", "subcategorySlug": "sports",
+    "manufacturerId": "m-bajaj", "manufacturerName": "Bajaj",
+    "modelId": "md-ns400z", "modelName": "Pulsar NS400Z",
+    "variantId": "v-ns400z-std", "variantName": "STD",
+    "year": 2023, "price": 172000, "condition": "USED",
+    "sellerType": "DEALER", "sellerId": "u-dealer1", "sellerName": "Imphal Motors",
+    "dealerId": "d1", "city": "Shillong", "state": "Meghalaya", "locality": "Police Bazar",
+    "kms": 7200, "fuel": "PETROL", "transmission": "MANUAL", "engineCc": 373,
+    "color": "Black", "featured": false, "verifiedSeller": true, "status": "ACTIVE",
+    "views": 956, "saves": 61, "createdAt": "2026-08-21T10:00:00Z", "updatedAt": "2026-08-28T10:00:00Z",
+    "description": "40 PS streetfighter with ride-by-wire and traction control. Dealer certified, Meghalaya registered, finance available.",
+    "media": [
+      { "id": "l14m1", "url": "/images/vehicles/bike-black.svg", "thumbUrl": "/images/vehicles/bike-black.svg", "kind": "IMAGE", "sort": 1 }
+    ],
+    "specs": { "Power": "40 PS", "Modes": "4 ride modes", "Owners": 1 }
+  },
+  {
+    "id": "l15", "slug": "2024-suzuki-access-125-aizawl-10015",
+    "title": "2024 Suzuki Access 125 - Family Scooter",
+    "categorySlug": "scooters", "subcategorySlug": "petrol-scooter",
+    "manufacturerId": "m-suzuki-m", "manufacturerName": "Suzuki",
+    "modelId": "md-access", "modelName": "Access 125",
+    "variantId": "v-access-std", "variantName": "STD",
+    "year": 2024, "price": 76000, "condition": "USED",
+    "sellerType": "PRIVATE", "sellerId": "u-seller2", "sellerName": "Priya S.",
+    "dealerId": null, "city": "Aizawl", "state": "Mizoram", "locality": "Zarkawt",
+    "kms": 6800, "fuel": "PETROL", "transmission": "AUTOMATIC", "engineCc": 124,
+    "color": "White", "featured": false, "verifiedSeller": false, "status": "ACTIVE",
+    "views": 244, "saves": 11, "createdAt": "2026-08-24T10:00:00Z", "updatedAt": "2026-08-29T10:00:00Z",
+    "description": "Smooth family scooter, ideal for Aizawl hills. Serviced twice at Suzuki centre. Mizoram registered.",
+    "media": [
+      { "id": "l15m1", "url": "/images/vehicles/scooter-white.svg", "thumbUrl": "/images/vehicles/scooter-white.svg", "kind": "IMAGE", "sort": 1 }
+    ],
+    "specs": { "Mileage": "47 kmpl", "Owners": 1 }
+  },
+  {
+    "id": "l16", "slug": "2021-mahindra-thar-lx-chandigarh-10016",
+    "title": "2021 Mahindra Thar LX Petrol AT Convertible",
+    "categorySlug": "cars", "subcategorySlug": "suv",
+    "manufacturerId": "m-mahindra", "manufacturerName": "Mahindra",
+    "modelId": "md-thar", "modelName": "Thar",
+    "variantId": "v-thar-lx", "variantName": "LX Petrol AT",
+    "year": 2021, "price": 1450000, "condition": "USED",
+    "sellerType": "PRIVATE", "sellerId": "u-seller1", "sellerName": "Thangjam R.",
+    "dealerId": null, "city": "Chandigarh", "state": "Chandigarh", "locality": "Sector 34",
+    "kms": 38000, "fuel": "PETROL", "transmission": "AUTOMATIC", "engineCc": 1997,
+    "color": "Red", "featured": true, "verifiedSeller": true, "status": "ACTIVE",
+    "views": 2210, "saves": 167, "createdAt": "2026-08-13T10:00:00Z", "updatedAt": "2026-08-27T10:00:00Z",
+    "description": "Convertible Thar with new soft top. 4x4 hardware never abused, mostly highway driven. CH registered, both keys.",
+    "media": [
+      { "id": "l16m1", "url": "/images/vehicles/suv-red.svg", "thumbUrl": "/images/vehicles/suv-red.svg", "kind": "IMAGE", "sort": 1 },
+      { "id": "l16m2", "url": "/images/vehicles/suv-black.svg", "thumbUrl": "/images/vehicles/suv-black.svg", "kind": "IMAGE", "sort": 2 }
+    ],
+    "specs": { "Power": "150 PS", "Drive": "4x4", "Top": "Convertible" }
+  },
+  {
+    "id": "l17", "slug": "2023-triumph-speed-400-goa-10017",
+    "title": "2023 Triumph Speed 400 - British Classic Roadster",
+    "categorySlug": "motorcycles", "subcategorySlug": "classic",
+    "manufacturerId": "m-triumph", "manufacturerName": "Triumph",
+    "modelId": "md-speed400", "modelName": "Speed 400",
+    "variantId": "v-speed400-std", "variantName": "STD",
+    "year": 2023, "price": 225000, "condition": "USED",
+    "sellerType": "PRIVATE", "sellerId": "u-seller2", "sellerName": "Priya S.",
+    "dealerId": null, "city": "Panaji", "state": "Goa", "locality": "Mapusa",
+    "kms": 5900, "fuel": "PETROL", "transmission": "MANUAL", "engineCc": 398,
+    "color": "Red", "featured": false, "verifiedSeller": true, "status": "ACTIVE",
+    "views": 812, "saves": 58, "createdAt": "2026-08-20T10:00:00Z", "updatedAt": "2026-08-28T10:00:00Z",
+    "description": "40 PS TR-series engine, premium fit and finish. Triumph service history, Goa registered. Riding jacket thrown in.",
+    "media": [
+      { "id": "l17m1", "url": "/images/vehicles/bike-orange.svg", "thumbUrl": "/images/vehicles/bike-orange.svg", "kind": "IMAGE", "sort": 1 }
+    ],
+    "specs": { "Power": "40 PS", "Torque": "37.5 Nm", "Owners": 1 }
+  },
+  {
+    "id": "l18", "slug": "2022-honda-amaze-kolkata-10018",
+    "title": "2022 Honda Amaze S CVT - City Automatic",
+    "categorySlug": "cars", "subcategorySlug": "sedan",
+    "manufacturerId": "m-honda-c", "manufacturerName": "Honda",
+    "modelId": "md-amaze", "modelName": "Amaze",
+    "variantId": "v-amaze-s", "variantName": "S",
+    "year": 2022, "price": 795000, "condition": "USED",
+    "sellerType": "DEALER", "sellerId": "u-dealer1", "sellerName": "Imphal Motors",
+    "dealerId": "d1", "city": "Kolkata", "state": "West Bengal", "locality": "Salt Lake",
+    "kms": 33000, "fuel": "PETROL", "transmission": "AUTOMATIC", "engineCc": 1199,
+    "color": "White", "featured": false, "verifiedSeller": true, "status": "ACTIVE",
+    "views": 587, "saves": 33, "createdAt": "2026-08-15T10:00:00Z", "updatedAt": "2026-08-26T10:00:00Z",
+    "description": "Smooth CVT compact sedan, perfect for Kolkata traffic. Dealer certified with WB registration transfer assistance.",
+    "media": [
+      { "id": "l18m1", "url": "/images/vehicles/sedan-white.svg", "thumbUrl": "/images/vehicles/sedan-white.svg", "kind": "IMAGE", "sort": 1 }
+    ],
+    "specs": { "Gearbox": "CVT", "Mileage": "18.3 kmpl", "Owners": 1 }
+  },
+  {
+    "id": "l19", "slug": "2024-bajaj-chetak-ahmedabad-10019",
+    "title": "2024 Bajaj Chetak 3501 - 153 km Range",
+    "categorySlug": "scooters", "subcategorySlug": "electric-scooter",
+    "manufacturerId": "m-bajaj", "manufacturerName": "Bajaj",
+    "modelId": "md-chetak", "modelName": "Chetak",
+    "variantId": "v-chetak-3501", "variantName": "3501",
+    "year": 2024, "price": 128000, "condition": "USED",
+    "sellerType": "PRIVATE", "sellerId": "u-seller1", "sellerName": "Thangjam R.",
+    "dealerId": null, "city": "Ahmedabad", "state": "Gujarat", "locality": "Navrangpura",
+    "kms": 3100, "fuel": "ELECTRIC", "transmission": "AUTOMATIC", "engineCc": null,
+    "color": "Blue", "featured": false, "verifiedSeller": false, "status": "ACTIVE",
+    "views": 356, "saves": 19, "createdAt": "2026-08-26T10:00:00Z", "updatedAt": "2026-08-31T10:00:00Z",
+    "description": "Metal-body premium e-scooter with touchscreen. GJ registered, charger and documents complete.",
+    "media": [
+      { "id": "l19m1", "url": "/images/vehicles/scooter-mint.svg", "thumbUrl": "/images/vehicles/scooter-mint.svg", "kind": "IMAGE", "sort": 1 }
+    ],
+    "specs": { "Range": "153 km IDC", "Battery": "3.5 kWh", "Owners": 1 }
+  },
+  {
+    "id": "l20", "slug": "2020-toyota-innova-hycross-patna-10020",
+    "title": "2020 Toyota Innova Hycross GX - 7 Seater Hybrid",
+    "categorySlug": "cars", "subcategorySlug": "mpv",
+    "manufacturerId": "m-toyota", "manufacturerName": "Toyota",
+    "modelId": "md-hycross", "modelName": "Innova Hycross",
+    "variantId": "v-hycross-gx", "variantName": "GX",
+    "year": 2020, "price": 1985000, "condition": "USED",
+    "sellerType": "PRIVATE", "sellerId": "u-seller2", "sellerName": "Priya S.",
+    "dealerId": null, "city": "Patna", "state": "Bihar", "locality": "Boring Road",
+    "kms": 52000, "fuel": "PETROL", "transmission": "AUTOMATIC", "engineCc": 1987,
+    "color": "White", "featured": false, "verifiedSeller": true, "status": "ACTIVE",
+    "views": 934, "saves": 52, "createdAt": "2026-08-11T10:00:00Z", "updatedAt": "2026-08-24T10:00:00Z",
+    "description": "Strong-hybrid 7-seater, 23 kmpl real world. Toyota service record, BR registered. Ideal family tourer.",
+    "media": [
+      { "id": "l20m1", "url": "/images/vehicles/mpv-white.svg", "thumbUrl": "/images/vehicles/mpv-white.svg", "kind": "IMAGE", "sort": 1 }
+    ],
+    "specs": { "Mileage": "23 kmpl", "Seats": 7, "Owners": 1 }
+  },
+  {
+    "id": "l21", "slug": "2023-ultraviolette-f77-bengaluru-10021",
+    "title": "2023 Ultraviolette F77 Mach 2 Recon - 323 km Range",
+    "categorySlug": "motorcycles", "subcategorySlug": "sports",
+    "manufacturerId": "m-ultraviolette", "manufacturerName": "Ultraviolette",
+    "modelId": "md-f77", "modelName": "F77 Mach 2",
+    "variantId": "v-f77-mach2", "variantName": "Mach 2 Recon",
+    "year": 2023, "price": 285000, "condition": "USED",
+    "sellerType": "PRIVATE", "sellerId": "u-seller1", "sellerName": "Thangjam R.",
+    "dealerId": null, "city": "Bengaluru", "state": "Karnataka", "locality": "Whitefield",
+    "kms": 4800, "fuel": "ELECTRIC", "transmission": "AUTOMATIC", "engineCc": null,
+    "color": "Black", "featured": false, "verifiedSeller": true, "status": "ACTIVE",
+    "views": 689, "saves": 71, "createdAt": "2026-08-22T10:00:00Z", "updatedAt": "2026-08-29T10:00:00Z",
+    "description": "Flagship Indian electric sportbike, 0-60 in 2.8 s. 10.3 kWh battery with 8-year warranty. KA registered.",
+    "media": [
+      { "id": "l21m1", "url": "/images/vehicles/bike-black.svg", "thumbUrl": "/images/vehicles/bike-black.svg", "kind": "IMAGE", "sort": 1 }
+    ],
+    "specs": { "Range": "323 km IDC", "Top speed": "155 km/h", "Owners": 1 }
+  },
+  {
+    "id": "l22", "slug": "2022-tata-ace-gold-indore-10022",
+    "title": "2022 Tata Ace Gold Diesel Plus - Mini Truck",
+    "categorySlug": "commercial", "subcategorySlug": "mini-truck",
+    "manufacturerId": "m-tata", "manufacturerName": "Tata",
+    "modelId": "md-ace", "modelName": "Ace Gold",
+    "variantId": "v-ace-diesel", "variantName": "Diesel Plus",
+    "year": 2022, "price": 495000, "condition": "USED",
+    "sellerType": "DEALER", "sellerId": "u-dealer1", "sellerName": "Imphal Motors",
+    "dealerId": "d1", "city": "Indore", "state": "Madhya Pradesh", "locality": "Vijay Nagar",
+    "kms": 68000, "fuel": "DIESEL", "transmission": "MANUAL", "engineCc": 702,
+    "color": "White", "featured": false, "verifiedSeller": true, "status": "ACTIVE",
+    "views": 312, "saves": 14, "createdAt": "2026-08-10T10:00:00Z", "updatedAt": "2026-08-23T10:00:00Z",
+    "description": "Work-ready Ace Gold with new load body flooring. Engine overhauled at 60k, all permits valid. MP registered.",
+    "media": [
+      { "id": "l22m1", "url": "/images/vehicles/truck-white.svg", "thumbUrl": "/images/vehicles/truck-white.svg", "kind": "IMAGE", "sort": 1 }
+    ],
+    "specs": { "Payload": "750 kg", "Owners": 1 }
+  },
+  {
+    "id": "l23", "slug": "2023-rockrider-st520-delhi-10023",
+    "title": "2023 Rockrider ST 520 MTB - Hardly Used",
+    "categorySlug": "bicycles", "subcategorySlug": "mountain",
+    "manufacturerId": "m-rockrider", "manufacturerName": "Rockrider",
+    "modelId": "md-st520", "modelName": "ST 520",
+    "variantId": null, "variantName": "27.5 inch",
+    "year": 2023, "price": 22000, "condition": "USED",
+    "sellerType": "PRIVATE", "sellerId": "u-seller2", "sellerName": "Priya S.",
+    "dealerId": null, "city": "New Delhi", "state": "Delhi", "locality": "Dwarka",
+    "kms": 0, "fuel": null, "transmission": null, "engineCc": null,
+    "color": "Red", "featured": false, "verifiedSeller": false, "status": "ACTIVE",
+    "views": 178, "saves": 8, "createdAt": "2026-08-25T10:00:00Z", "updatedAt": "2026-08-30T10:00:00Z",
+    "description": "Single-chainring MTB with hydraulic-feel mechanical discs. Ridden under 500 km, always stored indoors.",
+    "media": [
+      { "id": "l23m1", "url": "/images/vehicles/cycle-red.svg", "thumbUrl": "/images/vehicles/cycle-red.svg", "kind": "IMAGE", "sort": 1 }
+    ],
+    "specs": { "Wheel": "27.5 inch", "Speeds": "8", "Frame": "Aluminium" }
+  },
+  {
+    "id": "l24", "slug": "2024-kia-sonet-htk-jaipur-10024",
+    "title": "2024 Kia Sonet HTK - Sunroof, Connected Tech",
+    "categorySlug": "cars", "subcategorySlug": "suv",
+    "manufacturerId": "m-kia", "manufacturerName": "Kia",
+    "modelId": "md-sonet", "modelName": "Sonet",
+    "variantId": "v-sonet-htk", "variantName": "HTK",
+    "year": 2024, "price": 1025000, "condition": "USED",
+    "sellerType": "PRIVATE", "sellerId": "u-seller1", "sellerName": "Thangjam R.",
+    "dealerId": null, "city": "Jaipur", "state": "Rajasthan", "locality": "C-Scheme",
+    "kms": 12000, "fuel": "PETROL", "transmission": "MANUAL", "engineCc": 1197,
+    "color": "Blue", "featured": false, "verifiedSeller": true, "status": "ACTIVE",
+    "views": 764, "saves": 44, "createdAt": "2026-08-27T10:00:00Z", "updatedAt": "2026-08-31T10:00:00Z",
+    "description": "Sunroof compact SUV with Kia Connect. RJ registered, extended warranty till 2029. Non-negotiable price.",
+    "media": [
+      { "id": "l24m1", "url": "/images/vehicles/suv-blue.svg", "thumbUrl": "/images/vehicles/suv-blue.svg", "kind": "IMAGE", "sort": 1 }
+    ],
+    "specs": { "Sunroof": "Single pane", "Owners": 1, "Warranty": "Till 2029" }
+  },
+  {
+    "id": "l25", "slug": "2021-honda-hness-cb350-mumbai-10025",
+    "title": "2021 Honda CB350 H'ness DLX Pro - BigWing Maintained",
+    "categorySlug": "motorcycles", "subcategorySlug": "classic",
+    "manufacturerId": "m-honda-m", "manufacturerName": "Honda",
+    "modelId": "md-cb350", "modelName": "CB350 H'ness",
+    "variantId": "v-cb350-dlx", "variantName": "DLX Pro",
+    "year": 2021, "price": 178000, "condition": "USED",
+    "sellerType": "PRIVATE", "sellerId": "u-seller2", "sellerName": "Priya S.",
+    "dealerId": null, "city": "Mumbai", "state": "Maharashtra", "locality": "Powai",
+    "kms": 16000, "fuel": "PETROL", "transmission": "MANUAL", "engineCc": 348,
+    "color": "Black", "featured": false, "verifiedSeller": false, "status": "ACTIVE",
+    "views": 523, "saves": 31, "createdAt": "2026-08-18T10:00:00Z", "updatedAt": "2026-08-27T10:00:00Z",
+    "description": "Refined long-stroke single, BigWing service history. Honda voice control, traction control. MH registered.",
+    "media": [
+      { "id": "l25m1", "url": "/images/vehicles/bike-black.svg", "thumbUrl": "/images/vehicles/bike-black.svg", "kind": "IMAGE", "sort": 1 }
+    ],
+    "specs": { "Power": "21 PS", "Traction": "HSTC", "Owners": 2 }
+  },
+  {
+    "id": "l26", "slug": "2025-river-indie-pune-10026",
+    "title": "2025 River Indie - 14 inch Wheels, 120 L Storage",
+    "categorySlug": "scooters", "subcategorySlug": "electric-scooter",
+    "manufacturerId": "m-river", "manufacturerName": "River",
+    "modelId": "md-indie", "modelName": "Indie",
+    "variantId": "v-indie-std", "variantName": "STD",
+    "year": 2025, "price": 138000, "condition": "NEW",
+    "sellerType": "DEALER", "sellerId": "u-dealer2", "sellerName": "Cycle World",
+    "dealerId": "d2", "city": "Pune", "state": "Maharashtra", "locality": "Kothrud",
+    "kms": 0, "fuel": "ELECTRIC", "transmission": "AUTOMATIC", "engineCc": null,
+    "color": "Yellow", "featured": false, "verifiedSeller": true, "status": "ACTIVE",
+    "views": 145, "saves": 12, "createdAt": "2026-08-29T10:00:00Z", "updatedAt": "2026-09-01T10:00:00Z",
+    "description": "New River Indie with SUV-inspired stance, biggest boot in class and fast charging. Dealer PDI done, MH registration assistance.",
+    "media": [
+      { "id": "l26m1", "url": "/images/vehicles/scooter-mint.svg", "thumbUrl": "/images/vehicles/scooter-mint.svg", "kind": "IMAGE", "sort": 1 }
+    ],
+    "specs": { "Range": "161 km IDC", "Storage": "55 L + 12 L glove", "Warranty": "5 yr battery" }
   }
 ]

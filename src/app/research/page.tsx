@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Container, SectionTitle } from "@/components/ui";
-import { getArticles, searchListings, vehicleModels } from "@/lib/store";
+import { getArticles, manufacturers, searchListings, vehicleModels } from "@/lib/store";
 
 export const metadata: Metadata = { title: "Research" };
 
@@ -11,11 +11,13 @@ export default function ResearchPage() {
     <Container className="py-8">
       <SectionTitle kicker="Research" title="Research vehicles" sub="Catalogue knowledge separated from classified ads — specs, price ranges, then live inventory." />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {vehicleModels.slice(0, 9).map((m) => {
+        {vehicleModels.slice(0, 12).map((m) => {
           const live = searchListings({ model: m.slug, perPage: 1 });
+          const mfr = manufacturers.find((x) => x.id === m.manufacturerId);
+          const href = mfr ? `/${m.categorySlug}/${mfr.slug}/${m.slug}` : `/search?model=${m.slug}`;
           return (
-            <Link key={m.id} href={`/search?model=${m.slug}`} className="rounded-2xl border border-slate-200 bg-white p-5 hover:shadow-lg">
-              <p className="font-extrabold text-navy-950">{m.name}</p>
+            <Link key={m.id} href={href} className="rounded-2xl border border-slate-200 bg-white p-5 hover:shadow-lg">
+              <p className="font-extrabold text-navy-950">{mfr?.name} {m.name}</p>
               <p className="text-xs text-slate-500">{m.categorySlug} · {m.status}</p>
               <p className="mt-2 text-sm font-bold text-motora-600">{live.total} used for sale →</p>
             </Link>

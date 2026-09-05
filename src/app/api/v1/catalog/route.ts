@@ -1,6 +1,6 @@
 import { ok } from "@/lib/api-utils";
-import { categories, manufacturers, vehicleModels } from "@/lib/store";
+import { catalogStats, categories, manufacturers, vehicleModels, vehicleVariants } from "@/lib/store";
 
 export async function GET() {
-  return ok({ categories, manufacturers, models: vehicleModels });
+  return ok({ categories, manufacturers, models: vehicleModels, variants: vehicleVariants, stats: catalogStats() });
 }

@@ -10,6 +10,7 @@
 import categoriesJson from "../../data/catalog/categories.json";
 import manufacturersJson from "../../data/catalog/manufacturers.json";
 import modelsJson from "../../data/catalog/models.json";
+import variantsJson from "../../data/catalog/variants.json";
 import listingsJson from "../../data/catalog/listings.json";
 import dealersJson from "../../data/catalog/dealers.json";
 import packagesJson from "../../data/catalog/packages.json";
@@ -27,13 +28,63 @@ import type {
   SiteSettings,
   User,
   VehicleModel,
+  VehicleVariant,
 } from "./types";
 import { slugify } from "./utils";
+
+/** Normalization: ignore case, punctuation, hyphens, spacing (§28 search). */
+export function normalize(s: string): string {
+  return s
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, "");
+}
+
+// Manufacturer + model alias tables (duplicate prevention, §26-27).
+const MANUFACTURER_ALIASES: Record<string, string> = {
+  heromotocorp: "m-hero",
+  heromotocorp2: "m-hero",
+  hero: "m-hero",
+  hondamotorcycle: "m-honda-m",
+  hondascooter: "m-honda-m",
+  hondacarsindia: "m-honda-c",
+  mercedesbenz: "m-merc",
+  mercedes: "m-merc",
+  mg: "m-mg",
+  mgmotorindia: "m-mg",
+  royalenfieldltd: "m-re",
+  tvsmotor: "m-tvs",
+  tvsmotorcompany: "m-tvs",
+  bmwmotorrad: "m-bmw-m",
+};
+
+const MODEL_ALIASES: Record<string, string> = {
+  scorpion: "md-scorpio",
+  thar5door: "md-tharroxx",
+  activa6g: "md-activa",
+  classic: "md-classic350",
+  bullet350es: "md-bullet350",
+  pulsar150: "md-pulsarn160",
+};
+
+export function resolveManufacturerId(input: string): string | null {
+  const n = normalize(input);
+  const bySlug = manufacturers.find((m) => slugify(m.name) === input.toLowerCase() || normalize(m.name) === n);
+  if (bySlug) return bySlug.id;
+  return MANUFACTURER_ALIASES[n] ?? null;
+}
+
+export function resolveModelId(input: string): string | null {
+  const n = normalize(input);
+  const byName = vehicleModels.find((m) => m.slug === input.toLowerCase() || normalize(m.name) === n);
+  if (byName) return byName.id;
+  return MODEL_ALIASES[n] ?? null;
+}
 
 export const categories: Category[] = categoriesJson as Category[];
 export const manufacturers: Manufacturer[] =
   manufacturersJson as Manufacturer[];
 export const vehicleModels: VehicleModel[] = modelsJson as VehicleModel[];
+export const vehicleVariants: VehicleVariant[] = variantsJson as unknown as VehicleVariant[];
 export const seedListings: Listing[] = listingsJson as unknown as Listing[];
 export const seedDealers: Dealer[] = dealersJson as Dealer[];
 export const sellerPackages: SellerPackage[] = (
@@ -164,6 +215,51 @@ const articlesRuntime = [
   },
 ];
 
+export function getVariantsByModel(modelId: string): VehicleVariant[] {
+  return vehicleVariants.filter((v) => v.modelId === modelId);
+}
+export function findVariant(id: string): VehicleVariant | undefined {
+  return vehicleVariants.find((v) => v.id === id);
+}
+export function getModelBySlug(slug: string): VehicleModel | undefined {
+  return vehicleModels.find((m) => m.slug === slug);
+}
+export function getManufacturerBySlug(slug: string): Manufacturer | undefined {
+  return manufacturers.find((m) => m.slug === slug);
+}
+
+/** Import-status dashboard counts, read live from the catalogue (§49). */
+export function catalogStats() {
+  const byCategory = (cat: string) => {
+    const mfrs = manufacturers.filter((m) => m.categorySlugs.includes(cat));
+    const mfrIds = new Set(mfrs.map((m) => m.id));
+    const models = vehicleModels.filter((m) => m.categorySlug === cat || mfrIds.has(m.manufacturerId));
+    const modelIds = new Set(models.map((m) => m.id));
+    return {
+      manufacturers: mfrs.length,
+      models: models.length,
+      variants: vehicleVariants.filter((v) => modelIds.has(v.modelId)).length,
+    };
+  };
+  return {
+    cars: byCategory("cars"),
+    motorcycles: byCategory("motorcycles"),
+    scooters: byCategory("scooters"),
+    electric: {
+      manufacturers: manufacturers.filter((m) => m.categorySlugs.includes("electric")).length,
+      models: vehicleModels.filter((m) => m.bodyTypes.includes("electric-scooter") || m.bodyTypes.includes("electric")).length,
+      variants: 0,
+    },
+    commercial: byCategory("commercial"),
+    bicycles: byCategory("bicycles"),
+    totals: {
+      manufacturers: manufacturers.length,
+      models: vehicleModels.length,
+      variants: vehicleVariants.length,
+    },
+  };
+}
+
 export function getPasswordHash(userId: string): string | undefined {
   return passwordHashes.get(userId);
 }
@@ -243,25 +339,27 @@ export function searchListings(f: SearchFilters): SearchResult {
         : pool.filter((l) => l.categorySlug === c);
   }
   if (f.q) {
-    const q = f.q.toLowerCase();
+    const q = normalize(f.q);
     pool = pool.filter((l) =>
-      `${l.title} ${l.manufacturerName} ${l.modelName} ${l.variantName ?? ""} ${l.city}`.toLowerCase().includes(q),
+      normalize(`${l.title} ${l.manufacturerName} ${l.modelName} ${l.variantName ?? ""} ${l.city}`).includes(q),
     );
   }
   if (f.make) {
-    const m = f.make.toLowerCase().replace(/-/g, " ");
+    const m = normalize(f.make);
+    const resolved = resolveManufacturerId(f.make);
     pool = pool.filter(
       (l) =>
-        l.manufacturerName.toLowerCase().includes(m) ||
-        slugify(l.manufacturerName) === f.make!.toLowerCase(),
+        normalize(l.manufacturerName).includes(m) ||
+        (resolved != null && l.manufacturerId === resolved),
     );
   }
   if (f.model) {
-    const m = f.model.toLowerCase().replace(/-/g, " ");
+    const m = normalize(f.model);
+    const resolved = resolveModelId(f.model);
     pool = pool.filter(
       (l) =>
-        l.modelName.toLowerCase().includes(m) ||
-        slugify(l.modelName) === f.model!.toLowerCase(),
+        normalize(l.modelName).includes(m) ||
+        (resolved != null && l.modelId === resolved),
     );
   }
   if (f.city)
@@ -474,20 +572,20 @@ export function getArticles() {
   return [...articlesRuntime];
 }
 export function autocomplete(q: string) {
-  const query = q.trim().toLowerCase();
+  const query = normalize(q.trim());
   if (query.length < 2) return { makes: [], models: [], listings: [], dealers: [] };
   return {
     makes: manufacturers
-      .filter((m) => m.name.toLowerCase().includes(query))
+      .filter((m) => normalize(m.name).includes(query))
       .slice(0, 5),
     models: vehicleModels
-      .filter((m) => m.name.toLowerCase().includes(query))
+      .filter((m) => normalize(m.name).includes(query))
       .slice(0, 6),
     listings: activeListings()
-      .filter((l) => l.title.toLowerCase().includes(query))
+      .filter((l) => normalize(l.title).includes(query))
       .slice(0, 5),
     dealers: seedDealers
-      .filter((d) => d.businessName.toLowerCase().includes(query))
+      .filter((d) => normalize(d.businessName).includes(query))
       .slice(0, 3),
   };
 }

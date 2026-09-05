@@ -20,6 +20,7 @@ const sql = postgres(url, { prepare: false });
 
 const manufacturers = load("manufacturers.json");
 const models = load("models.json");
+const variants = load("variants.json");
 const listings = load("listings.json");
 const dealers = load("dealers.json");
 
@@ -43,5 +44,10 @@ for (const l of listings) {
     values (${l.id}, ${l.slug}, ${l.title}, ${l.categorySlug}, ${l.subcategorySlug}, ${l.manufacturerId}, ${l.manufacturerName}, ${l.modelId}, ${l.modelName}, ${l.variantId}, ${l.variantName}, ${l.year}, ${l.price}, ${l.condition}, ${l.sellerType}, ${l.sellerId}, ${l.sellerName}, ${l.dealerId}, ${l.city}, ${l.state}, ${l.locality}, ${l.kms}, ${l.fuel}, ${l.transmission}, ${l.engineCc}, ${l.color}, ${l.description}, ${sql.json(l.media)}, ${sql.json(l.specs)}, ${l.featured}, ${l.verifiedSeller}, ${l.status}, ${l.views}, ${l.saves})
     on conflict (id) do update set price = excluded.price, status = excluded.status`;
 }
-console.log(`Seeded ${manufacturers.length} manufacturers, ${models.length} models, ${dealers.length} dealers, ${listings.length} listings.`);
+for (const v of variants) {
+  await sql`insert into vehicle_variants (id, slug, model_id, name, year, fuel, transmission, engine_cc, power_ps, price_ex_showroom)
+    values (${v.id}, ${v.slug}, ${v.modelId}, ${v.name}, ${v.year}, ${v.fuel}, ${v.transmission}, ${v.engineCc}, ${v.powerPs}, ${v.priceExShowroom})
+    on conflict (id) do update set name = excluded.name, price_ex_showroom = excluded.price_ex_showroom`;
+}
+console.log(`Seeded ${manufacturers.length} manufacturers, ${models.length} models, ${variants.length} variants, ${dealers.length} dealers, ${listings.length} listings.`);
 await sql.end();

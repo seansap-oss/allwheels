@@ -1,8 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { manufacturers, vehicleModels, sellerPackages, siteSettings } from "@/lib/store";
+import { sellerPackages, siteSettings } from "@/lib/store";
 
 const STEPS = ["Category", "Model", "Condition", "Details", "Photos", "Price", "Package", "Preview"] as const;
 
@@ -14,6 +14,10 @@ const CATS = [
   { slug: "commercial", label: "Commercial" },
   { slug: "bicycles", label: "Bicycle" },
 ];
+
+interface CatalogMake { id: string; slug: string; name: string }
+interface CatalogModel { id: string; slug: string; name: string; status: string }
+interface CatalogVariant { id: string; name: string; fuel: string | null; transmission: string | null; engineCc: number | null; powerPs: number | null; priceExShowroom: number | null }
 
 export function SellWizard() {
   const [step, setStep] = useState(0);
@@ -36,13 +40,72 @@ export function SellWizard() {
   const [photos, setPhotos] = useState<{ name: string; progress: number; done: boolean }[]>([]);
   const [err, setErr] = useState("");
   const [busy, setBusy] = useState(false);
+  const [makes, setMakes] = useState<CatalogMake[]>([]);
+  const [models, setModels] = useState<CatalogModel[]>([]);
+  const [variants, setVariants] = useState<CatalogVariant[]>([]);
   const router = useRouter();
 
-  const makes = useMemo(() => manufacturers.map((m) => m.name), []);
-  const models = useMemo(
-    () => vehicleModels.filter((m) => m.name.toLowerCase().includes("") ).map((m) => m.name),
-    [],
-  );
+  // Live catalogue: manufacturers follow the chosen category (§41 API).
+  useEffect(() => {
+    fetch(`/api/v1/catalog/manufacturers?category=${form.categorySlug}`)
+      .then((r) => r.json())
+      .then((j) => {
+        if (j.success && j.data.length > 0) {
+          setMakes(j.data);
+          if (!j.data.some((m: CatalogMake) => m.name === form.manufacturerName)) {
+            setForm((f) => ({ ...f, manufacturerName: j.data[0].name, modelName: "", variantName: "" }));
+          }
+        }
+      })
+      .catch(() => undefined);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [form.categorySlug]);
+
+  // Models follow the chosen manufacturer; variants follow the model.
+  useEffect(() => {
+    if (!form.manufacturerName) return;
+    const make = makes.find((m) => m.name === form.manufacturerName);
+    const q = make ? `manufacturer=${make.slug}` : `category=${form.categorySlug}`;
+    fetch(`/api/v1/catalog/models?${q}`)
+      .then((r) => r.json())
+      .then((j) => {
+        if (j.success) {
+          setModels(j.data);
+          if (j.data.length > 0 && !j.data.some((m: CatalogModel) => m.name === form.modelName)) {
+            setForm((f) => ({ ...f, modelName: j.data[0].name, variantName: "" }));
+          }
+        }
+      })
+      .catch(() => undefined);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [form.manufacturerName, makes.length]);
+
+  useEffect(() => {
+    const model = models.find((m) => m.name === form.modelName);
+    if (!model) {
+      setVariants([]);
+      return;
+    }
+    fetch(`/api/v1/catalog/variants?model=${model.slug}`)
+      .then((r) => r.json())
+      .then((j) => {
+        if (j.success) setVariants(j.data);
+      })
+      .catch(() => undefined);
+  }, [form.modelName, models]);
+
+  function pickVariant(name: string) {
+    setForm((f) => ({ ...f, variantName: name }));
+    // Specs auto-populate from the catalogue (§19).
+    const v = variants.find((x) => x.name === name);
+    if (v) {
+      setForm((f) => ({
+        ...f,
+        fuel: (v.fuel as typeof f.fuel) ?? f.fuel,
+        price: v.priceExShowroom ? Math.round(v.priceExShowroom * 0.82) : f.price,
+      }));
+    }
+  }
   const pkg = sellerPackages.find((p) => p.id === form.packageId);
 
   function set<K extends keyof typeof form>(k: K, v: (typeof form)[K]) {
@@ -136,17 +199,24 @@ export function SellWizard() {
             <p className="text-sm text-slate-600">Picked from the Motora master catalogue — no free-typing makes.</p>
             <label className="grid gap-1 text-sm font-semibold">Make
               <select value={form.manufacturerName} onChange={(e) => set("manufacturerName", e.target.value)} className="h-12 rounded-xl border border-slate-300 px-3">
-                {makes.map((m) => <option key={m} value={m}>{m}</option>)}
+                {makes.map((m) => <option key={m.id} value={m.name}>{m.name}</option>)}
               </select>
             </label>
             <label className="grid gap-1 text-sm font-semibold">Model
               <select value={form.modelName} onChange={(e) => set("modelName", e.target.value)} className="h-12 rounded-xl border border-slate-300 px-3">
-                {models.map((m) => <option key={m} value={m}>{m}</option>)}
+                {models.map((m) => <option key={m.id} value={m.name}>{m.name}{m.status !== "ACTIVE" ? ` (${m.status})` : ""}</option>)}
               </select>
             </label>
             <div className="grid grid-cols-2 gap-3">
-              <label className="grid gap-1 text-sm font-semibold">Variant (optional)
-                <input value={form.variantName} onChange={(e) => set("variantName", e.target.value)} placeholder="e.g. Halcyon Green" className="h-12 rounded-xl border border-slate-300 px-3 font-normal" />
+              <label className="grid gap-1 text-sm font-semibold">Variant{variants.length > 0 ? " — specs auto-fill" : " (optional)"}
+                {variants.length > 0 ? (
+                  <select value={form.variantName} onChange={(e) => pickVariant(e.target.value)} className="h-12 rounded-xl border border-slate-300 px-3 font-normal">
+                    <option value="">Select variant…</option>
+                    {variants.map((v) => <option key={v.id} value={v.name}>{v.name}</option>)}
+                  </select>
+                ) : (
+                  <input value={form.variantName} onChange={(e) => set("variantName", e.target.value)} placeholder="e.g. Halcyon Green" className="h-12 rounded-xl border border-slate-300 px-3 font-normal" />
+                )}
               </label>
               <label className="grid gap-1 text-sm font-semibold">Year
                 <input type="number" min={1980} max={2035} value={form.year} onChange={(e) => set("year", Number(e.target.value))} className="h-12 rounded-xl border border-slate-300 px-3 font-normal" />
