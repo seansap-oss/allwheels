@@ -41,23 +41,29 @@ export function Header({ userName }: { userName: string | null }) {
   }, [q]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-navy-950/95 text-white backdrop-blur" style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>
-      <div className="mx-auto flex h-16 w-full max-w-7xl items-center gap-2 px-4 sm:gap-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/90 text-navy-950 shadow-[0_1px_12px_rgba(10,22,51,0.06)] backdrop-blur" style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>
+      <div className="mx-auto flex h-16 w-full max-w-7xl items-center gap-2 px-4 sm:gap-3 sm:px-6 lg:px-8">
         <button
-          className="flex h-11 w-11 items-center justify-center rounded-lg text-2xl lg:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-lg text-2xl hover:bg-slate-100 lg:hidden"
           aria-label="Open menu"
           onClick={() => setOpen(true)}
         >
           ☰
         </button>
-        <Link href="/" className="flex items-center gap-2" aria-label="Motora home">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-motora-500 via-teal-glow-500 to-coral-500 text-xl font-black">M</span>
-          <span className="text-xl font-black tracking-tight">MOTORA</span>
+        <Link href="/" className="flex items-center gap-2.5" aria-label="Motora home">
+          <span className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-navy-950 shadow-md">
+            <span className="font-display text-2xl font-bold text-white">M</span>
+            <span className="absolute inset-x-2 bottom-1.5 h-0.5 rounded-full bg-gradient-to-r from-teal-glow-400 to-coral-500" aria-hidden="true" />
+          </span>
+          <span className="flex flex-col leading-none">
+            <span className="font-display text-[22px] font-bold tracking-[0.18em]">MOTORA</span>
+            <span className="text-[9px] font-bold uppercase tracking-[0.32em] text-slate-400">Find your ride</span>
+          </span>
         </Link>
-        <nav className="ml-2 hidden items-center gap-1 lg:flex" aria-label="Primary">
-          <Link href="/search?category=cars" className="rounded-lg px-3 py-2 text-sm font-semibold hover:bg-white/10">Buy</Link>
+        <nav className="ml-2 hidden items-center gap-0.5 lg:flex" aria-label="Primary">
+          <Link href="/search?category=cars" className="rounded-lg px-3 py-2 text-sm font-bold hover:bg-slate-100">Buy</Link>
           {NAV.slice(0, 7).map((n) => (
-            <Link key={n.label} href={n.href} className="rounded-lg px-2 py-2 text-sm text-slate-200 hover:bg-white/10 hover:text-white">
+            <Link key={n.label} href={n.href} className="rounded-lg px-2 py-2 text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-navy-950">
               {n.label}
             </Link>
           ))}
@@ -69,12 +75,12 @@ export function Header({ userName }: { userName: string | null }) {
               value={q}
               onChange={(e) => setQ(e.target.value)}
               placeholder="Search make, model, city…"
-              className="h-10 w-full rounded-full border border-white/15 bg-white/10 px-4 text-sm placeholder:text-slate-400 focus:border-teal-glow-400 focus:outline-none"
+              className="h-10 w-full rounded-full border border-slate-200 bg-slate-100 px-4 text-sm text-navy-950 placeholder:text-slate-400 focus:border-motora-500 focus:bg-white focus:outline-none"
               autoComplete="off"
             />
           </form>
           {autoc ? (
-            <div className="absolute inset-x-0 top-11 overflow-hidden rounded-xl bg-white text-navy-950 shadow-xl">
+            <div className="absolute inset-x-0 top-11 overflow-hidden rounded-xl border border-slate-200 bg-white text-navy-950 shadow-xl">
               {autoc.makes.map((m) => (
                 <Link key={m.slug} href={`/search?make=${m.slug}`} className="block px-4 py-2 text-sm hover:bg-slate-100">
                   {m.name}
@@ -89,18 +95,18 @@ export function Header({ userName }: { userName: string | null }) {
           ) : null}
         </div>
         <div className="ml-auto flex items-center gap-1 sm:gap-2 md:ml-0">
-          <Link href="/saved" className="flex h-11 min-w-11 items-center justify-center rounded-lg px-2 text-xl hover:bg-white/10" aria-label="Saved vehicles">♥</Link>
-          <Link href="/messages" className="hidden h-11 min-w-11 items-center justify-center rounded-lg px-2 text-xl hover:bg-white/10 sm:flex" aria-label="Messages">✉</Link>
+          <Link href="/saved" className="flex h-11 min-w-11 items-center justify-center rounded-lg px-2 text-xl hover:bg-slate-100" aria-label="Saved vehicles">♥</Link>
+          <Link href="/messages" className="hidden h-11 min-w-11 items-center justify-center rounded-lg px-2 text-xl hover:bg-slate-100 sm:flex" aria-label="Messages">✉</Link>
           {userName ? (
-            <Link href="/profile" className="hidden h-10 items-center rounded-full bg-white/10 px-4 text-sm font-bold hover:bg-white/20 sm:flex">
+            <Link href="/profile" className="hidden h-10 items-center rounded-full bg-navy-950 px-4 text-sm font-bold text-white hover:bg-navy-900 sm:flex">
               {userName.split(" ")[0]}
             </Link>
           ) : (
-            <Link href="/login" className="hidden h-10 items-center rounded-full bg-white/10 px-4 text-sm font-bold hover:bg-white/20 sm:flex">
+            <Link href="/login" className="hidden h-10 items-center rounded-full border border-slate-300 px-4 text-sm font-bold hover:border-navy-950 sm:flex">
               Login
             </Link>
           )}
-          <Link href="/sell" className="flex h-10 items-center rounded-full bg-coral-500 px-4 text-sm font-extrabold text-white hover:bg-coral-600">
+          <Link href="/sell" className="flex h-10 items-center rounded-full bg-coral-500 px-4 text-sm font-extrabold text-white shadow-sm hover:bg-coral-600">
             Sell Vehicle
           </Link>
         </div>
@@ -111,30 +117,30 @@ export function Header({ userName }: { userName: string | null }) {
           <input
             name="q"
             placeholder="Search cars, bikes, EVs, bicycles…"
-            className="h-11 w-full rounded-xl border border-white/15 bg-white/10 px-4 text-[16px] placeholder:text-slate-400 focus:border-teal-glow-400 focus:outline-none"
+            className="h-11 w-full rounded-xl border border-slate-200 bg-slate-100 px-4 text-[16px] placeholder:text-slate-400 focus:border-motora-500 focus:bg-white focus:outline-none"
           />
         </form>
       </div>
       {open ? (
         <div className="fixed inset-0 z-50 lg:hidden" role="dialog" aria-modal="true" aria-label="Menu">
-          <div className="absolute inset-0 bg-black/60" onClick={() => setOpen(false)} />
-          <div className="absolute left-0 top-0 flex h-full w-[86vw] max-w-sm flex-col bg-navy-950 p-5">
+          <div className="absolute inset-0 bg-navy-950/50" onClick={() => setOpen(false)} />
+          <div className="absolute left-0 top-0 flex h-full w-[86vw] max-w-sm flex-col bg-white p-5 text-navy-950 shadow-2xl">
             <div className="flex items-center justify-between">
-              <span className="text-lg font-black">MOTORA</span>
-              <button aria-label="Close menu" className="flex h-11 w-11 items-center justify-center rounded-lg text-2xl hover:bg-white/10" onClick={() => setOpen(false)}>✕</button>
+              <span className="font-display text-lg font-bold tracking-[0.18em]">MOTORA</span>
+              <button aria-label="Close menu" className="flex h-11 w-11 items-center justify-center rounded-lg text-2xl hover:bg-slate-100" onClick={() => setOpen(false)}>✕</button>
             </div>
             <nav className="mt-4 flex flex-col gap-1 overflow-y-auto" aria-label="Mobile">
               {[{ href: "/", label: "Home" }, { href: "/sell", label: "Sell Vehicle" }, ...NAV, { href: "/pricing", label: "Pricing" }, { href: "/news", label: "News & Reviews" }, { href: "/contact", label: "Contact" }].map((n) => (
-                <Link key={n.href + n.label} href={n.href} className="rounded-xl px-3 py-3 text-base font-semibold hover:bg-white/10">
+                <Link key={n.href + n.label} href={n.href} className="rounded-xl px-3 py-3 text-base font-semibold hover:bg-slate-100">
                   {n.label}
                 </Link>
               ))}
             </nav>
             <div className="mt-auto flex gap-2 pt-4">
               {userName ? (
-                <Link href="/profile" className="flex h-12 flex-1 items-center justify-center rounded-xl bg-white/10 font-bold">My Account</Link>
+                <Link href="/profile" className="flex h-12 flex-1 items-center justify-center rounded-xl bg-navy-950 font-bold text-white">My Account</Link>
               ) : (
-                <Link href="/login" className="flex h-12 flex-1 items-center justify-center rounded-xl bg-white/10 font-bold">Login / Signup</Link>
+                <Link href="/login" className="flex h-12 flex-1 items-center justify-center rounded-xl bg-navy-950 font-bold text-white">Login / Signup</Link>
               )}
               <Link href="/sell" className="flex h-12 flex-1 items-center justify-center rounded-xl bg-coral-500 font-extrabold">Sell</Link>
             </div>
@@ -184,7 +190,7 @@ export function Footer() {
     <footer className="mt-16 bg-navy-950 pb-24 text-slate-300 md:pb-8">
       <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-12 sm:grid-cols-2 sm:px-6 lg:grid-cols-5 lg:px-8">
         <div>
-          <p className="text-lg font-black text-white">MOTORA</p>
+          <p className="font-display text-lg font-bold tracking-[0.18em] text-white">MOTORA</p>
           <p className="mt-2 text-sm text-slate-400">Cars, motorcycles, scooters, EVs, commercial vehicles and bicycles — all in one place.</p>
         </div>
         <nav aria-label="Buy">
@@ -225,7 +231,7 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-2 px-4 py-4 text-xs text-slate-400 sm:px-6 lg:px-8">
           <span>© 2026 Motora Technologies Pvt. Ltd. · Made in India</span>
-          <span>One backend · One account · Web · PWA · Android · iOS</span>
+          <span>Category photos: Wikimedia Commons contributors (CC BY / CC BY-SA) · see /images/photos/credits.json</span>
         </div>
       </div>
     </footer>

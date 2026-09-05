@@ -11,12 +11,12 @@ export const metadata: Metadata = {
 };
 
 const CATEGORY_CARDS = [
-  { slug: "cars", name: "Cars", emoji: "🚗", blurb: "Hatchbacks to luxury SUVs" },
-  { slug: "motorcycles", name: "Motorcycles", emoji: "🏍️", blurb: "Commuter to adventure" },
-  { slug: "scooters", name: "Scooters", emoji: "🛵", blurb: "Petrol + electric" },
-  { slug: "electric", name: "Electric", emoji: "⚡", blurb: "EV scooters & cars" },
-  { slug: "commercial", name: "Commercial", emoji: "🚚", blurb: "Trucks, pickups, buses" },
-  { slug: "bicycles", name: "Bicycles", emoji: "🚲", blurb: "MTB, road, kids, e-bikes" },
+  { slug: "cars", name: "Cars", img: "/images/photos/cat-suv.jpg", blurb: "Hatchbacks to luxury SUVs" },
+  { slug: "motorcycles", name: "Motorcycles", img: "/images/photos/cat-bike.jpg", blurb: "Commuter to adventure" },
+  { slug: "scooters", name: "Scooters", img: "/images/photos/cat-scooter.jpg", blurb: "Petrol + electric" },
+  { slug: "electric", name: "Electric", img: "/images/photos/cat-ev.jpg", blurb: "EV scooters & cars" },
+  { slug: "commercial", name: "Commercial", img: "/images/photos/cat-truck.jpg", blurb: "Trucks, pickups, buses" },
+  { slug: "bicycles", name: "Bicycles", img: "/images/photos/cat-cycle.jpg", blurb: "MTB, road, kids, e-bikes" },
 ];
 
 export default function HomePage() {
@@ -30,37 +30,39 @@ export default function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden bg-navy-950 text-white">
-        <div className="absolute inset-0 bg-gradient-to-br from-navy-950 via-navy-900 to-motora-700" aria-hidden="true" />
-        <div className="absolute -right-20 -top-20 h-96 w-96 rounded-full bg-teal-glow-500/20 blur-3xl" aria-hidden="true" />
-        <div className="absolute -bottom-24 -left-16 h-80 w-80 rounded-full bg-coral-500/20 blur-3xl" aria-hidden="true" />
-        <Container className="relative py-12 sm:py-16">
-          <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-teal-glow-400">
-            🇮🇳 India&apos;s multi-category marketplace
+      <section className="relative overflow-hidden bg-[#060b1f] text-white">
+        <div className="absolute inset-0 bg-[radial-gradient(1100px_480px_at_15%_-10%,#1a5fd033,transparent),radial-gradient(900px_420px_at_90%_10%,#f96a3e1f,transparent),linear-gradient(180deg,#060b1f_0%,#0a1633_55%,#0f2050_100%)]" aria-hidden="true" />
+        <div className="absolute inset-0 opacity-[0.14]" aria-hidden="true"
+          style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)", backgroundSize: "44px 44px", maskImage: "radial-gradient(700px 340px at 50% 0%, black, transparent)" }} />
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-teal-glow-400/70 to-transparent" aria-hidden="true" />
+        <Container className="relative py-12 sm:py-20">
+          <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em] text-teal-glow-400">
+            <span className="h-1.5 w-1.5 rounded-full bg-teal-glow-400" aria-hidden="true" /> India&apos;s multi-category marketplace
           </p>
-          <h1 className="mt-4 max-w-3xl text-4xl font-black leading-tight tracking-tight sm:text-6xl">
-            Find your next ride.
+          <h1 className="font-display mt-5 max-w-3xl text-[42px] font-bold leading-[1.02] sm:text-7xl">
+            Find your next ride<span className="text-coral-500">.</span>
           </h1>
-          <p className="mt-3 max-w-2xl text-base text-slate-300 sm:text-lg">
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
             Cars, motorcycles, scooters, EVs, commercial vehicles and bicycles — all in one place.
           </p>
-          <div className="mt-6 max-w-4xl">
+          <div className="mt-7 max-w-4xl">
             <HeroSearch total={total} />
           </div>
-          <div className="mt-4 flex flex-wrap gap-2 text-xs">
-            <span className="text-slate-400">Popular:</span>
+          <div className="mt-4 flex flex-wrap items-center gap-2 text-xs">
+            <span className="font-semibold uppercase tracking-widest text-slate-500">Popular:</span>
             {[
               ["Classic 350", "/search?q=classic+350"],
               ["Scorpio N", "/search?q=scorpio"],
               ["Activa", "/search?q=activa"],
               ["450X", "/search?q=450x"],
             ].map(([label, href]) => (
-              <Link key={href} href={href} className="rounded-full bg-white/10 px-3 py-1.5 font-semibold hover:bg-white/20">
+              <Link key={href} href={href} className="rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 font-semibold text-slate-200 hover:border-white/40 hover:text-white">
                 {label}
               </Link>
             ))}
           </div>
         </Container>
+        <div className="absolute inset-x-0 bottom-0 h-px bg-white/10" aria-hidden="true" />
       </section>
 
       {/* BROWSE BY CATEGORY */}
@@ -69,13 +71,18 @@ export default function HomePage() {
           <SectionTitle kicker="Marketplace" title="Browse by category" sub="Six marketplaces, one account. Your saved vehicles sync across web, PWA, Android and iOS." />
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
             {CATEGORY_CARDS.map((c) => (
-              <Link key={c.slug} href={`/search?category=${c.slug}`} className="group rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg">
-                <span className="text-3xl">{c.emoji}</span>
-                <p className="mt-2 font-extrabold text-navy-950">{c.name}</p>
-                <p className="text-xs text-slate-500">{c.blurb}</p>
+              <Link key={c.slug} href={`/search?category=${c.slug}`} className="group relative overflow-hidden rounded-2xl bg-navy-950 shadow-sm transition hover:-translate-y-0.5 hover:shadow-xl">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={c.img} alt={c.name} loading="lazy" className="aspect-[4/5] w-full object-cover transition duration-300 group-hover:scale-105 sm:aspect-[4/4]" />
+                <span className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/20 to-transparent" aria-hidden="true" />
+                <span className="absolute inset-x-0 bottom-0 p-3">
+                  <span className="block font-display text-[15px] font-bold text-white">{c.name}</span>
+                  <span className="block text-[11px] text-slate-300">{c.blurb}</span>
+                </span>
               </Link>
             ))}
           </div>
+          <p className="mt-3 text-[11px] text-slate-400">Category photography: Wikimedia Commons contributors, CC BY / CC BY-SA (see footer).</p>
         </Container>
       </section>
 

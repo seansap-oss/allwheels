@@ -22,6 +22,16 @@
   --sab: env(safe-area-inset-bottom, 0px);
 }
 
+.font-display {
+  font-family: var(--font-display), var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background: #0a1633;
+  color: #ffffff;
+}
+
 html {
   scroll-behavior: smooth;
 }

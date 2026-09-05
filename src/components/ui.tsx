@@ -12,7 +12,7 @@ export function SectionTitle({ kicker, title, sub, action }: { kicker?: string; 
         {kicker ? (
           <p className="text-xs font-bold uppercase tracking-widest text-coral-600">{kicker}</p>
         ) : null}
-        <h2 className="mt-1 text-2xl font-extrabold tracking-tight text-navy-950 sm:text-3xl">{title}</h2>
+        <h2 className="font-display mt-1 text-2xl font-bold text-navy-950 sm:text-3xl">{title}</h2>
         {sub ? <p className="mt-1 max-w-2xl text-sm text-slate-600">{sub}</p> : null}
       </div>
       {action}
