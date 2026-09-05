@@ -1,0 +1,22 @@
+[
+  {
+    "id": "d1", "slug": "imphalmotors", "businessName": "Imphal Motors",
+    "contactPerson": "Rajesh Singh", "phone": "+919862000001", "email": "sales@imphalmotors.in",
+    "city": "Imphal", "state": "Manipur", "address": "NH-2, Dimapur Road, Imphal 795001",
+    "lat": 24.817, "lng": 93.936, "logoUrl": null, "coverUrl": null,
+    "description": "Manipur's trusted multi-brand used vehicle dealer since 2012. Certified cars and bikes with warranty, finance and exchange.",
+    "website": "https://imphalmotors.in", "whatsapp": "+919862000001",
+    "verified": true, "status": "APPROVED", "rating": 4.6, "reviewCount": 212,
+    "openingHours": "Mon-Sat 9:30am-7pm, Sun 11am-5pm"
+  },
+  {
+    "id": "d2", "slug": "cycleworld", "businessName": "Cycle World",
+    "contactPerson": "Anita Desai", "phone": "+919820000002", "email": "hello@cycleworld.in",
+    "city": "Mumbai", "state": "Maharashtra", "address": "Shop 12, Crystal Plaza, Andheri West, Mumbai 400053",
+    "lat": 19.13, "lng": 72.82, "logoUrl": null, "coverUrl": null,
+    "description": "Premium bicycle store: road, MTB, kids and e-bikes with service workshop.",
+    "website": null, "whatsapp": "+919820000002",
+    "verified": true, "status": "APPROVED", "rating": 4.8, "reviewCount": 96,
+    "openingHours": "Mon-Sun 10am-8pm"
+  }
+]

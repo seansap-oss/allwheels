@@ -1,0 +1,22 @@
+[
+  { "id": "m-maruti", "slug": "maruti-suzuki", "name": "Maruti Suzuki", "categorySlugs": ["cars"], "country": "India", "logoUrl": null, "status": "ACTIVE" },
+  { "id": "m-hyundai", "slug": "hyundai", "name": "Hyundai", "categorySlugs": ["cars"], "country": "South Korea", "logoUrl": null, "status": "ACTIVE" },
+  { "id": "m-mahindra", "slug": "mahindra", "name": "Mahindra", "categorySlugs": ["cars", "commercial"], "country": "India", "logoUrl": null, "status": "ACTIVE" },
+  { "id": "m-tata", "slug": "tata", "name": "Tata", "categorySlugs": ["cars", "commercial"], "country": "India", "logoUrl": null, "status": "ACTIVE" },
+  { "id": "m-toyota", "slug": "toyota", "name": "Toyota", "categorySlugs": ["cars"], "country": "Japan", "logoUrl": null, "status": "ACTIVE" },
+  { "id": "m-honda-c", "slug": "honda-cars", "name": "Honda", "categorySlugs": ["cars"], "country": "Japan", "logoUrl": null, "status": "ACTIVE" },
+  { "id": "m-kia", "slug": "kia", "name": "Kia", "categorySlugs": ["cars"], "country": "South Korea", "logoUrl": null, "status": "ACTIVE" },
+  { "id": "m-re", "slug": "royal-enfield", "name": "Royal Enfield", "categorySlugs": ["motorcycles"], "country": "India", "logoUrl": null, "status": "ACTIVE" },
+  { "id": "m-hero", "slug": "hero", "name": "Hero", "categorySlugs": ["motorcycles", "scooters"], "country": "India", "logoUrl": null, "status": "ACTIVE" },
+  { "id": "m-honda-m", "slug": "honda", "name": "Honda Motorcycle", "categorySlugs": ["motorcycles", "scooters"], "country": "Japan", "logoUrl": null, "status": "ACTIVE" },
+  { "id": "m-tvs", "slug": "tvs", "name": "TVS", "categorySlugs": ["motorcycles", "scooters"], "country": "India", "logoUrl": null, "status": "ACTIVE" },
+  { "id": "m-bajaj", "slug": "bajaj", "name": "Bajaj", "categorySlugs": ["motorcycles"], "country": "India", "logoUrl": null, "status": "ACTIVE" },
+  { "id": "m-yamaha", "slug": "yamaha", "name": "Yamaha", "categorySlugs": ["motorcycles", "scooters"], "country": "Japan", "logoUrl": null, "status": "ACTIVE" },
+  { "id": "m-ktm", "slug": "ktm", "name": "KTM", "categorySlugs": ["motorcycles"], "country": "Austria", "logoUrl": null, "status": "ACTIVE" },
+  { "id": "m-ola", "slug": "ola-electric", "name": "Ola Electric", "categorySlugs": ["scooters", "electric"], "country": "India", "logoUrl": null, "status": "ACTIVE" },
+  { "id": "m-ather", "slug": "ather", "name": "Ather", "categorySlugs": ["scooters", "electric"], "country": "India", "logoUrl": null, "status": "ACTIVE" },
+  { "id": "m-ashok", "slug": "ashok-leyland", "name": "Ashok Leyland", "categorySlugs": ["commercial"], "country": "India", "logoUrl": null, "status": "ACTIVE" },
+  { "id": "m-herocyc", "slug": "hero-cycles", "name": "Hero Cycles", "categorySlugs": ["bicycles"], "country": "India", "logoUrl": null, "status": "ACTIVE" },
+  { "id": "m-firefox", "slug": "firefox", "name": "Firefox", "categorySlugs": ["bicycles"], "country": "India", "logoUrl": null, "status": "ACTIVE" },
+  { "id": "m-decathlon", "slug": "rockrider", "name": "Rockrider", "categorySlugs": ["bicycles"], "country": "France", "logoUrl": null, "status": "ACTIVE" }
+]

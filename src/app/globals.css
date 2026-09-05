@@ -1,26 +1,107 @@
 @import "tailwindcss";
 
+@theme {
+  --color-navy-950: #0a1633;
+  --color-navy-900: #0f2050;
+  --color-motora-50: #eef4ff;
+  --color-motora-100: #dbe7fd;
+  --color-motora-500: #1f6feb;
+  --color-motora-600: #1a5fd0;
+  --color-motora-700: #174ea8;
+  --color-teal-glow-400: #2dd4bf;
+  --color-teal-glow-500: #14b8a6;
+  --color-coral-400: #ff7a59;
+  --color-coral-500: #f96a3e;
+  --color-coral-600: #e4572e;
+}
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0a1633;
+  --sat: env(safe-area-inset-top, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Comfortable touch targets on coarse pointers */
+@media (pointer: coarse) {
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    min-height: 44px;
+  }
+  nav a,
+  nav button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Skeleton shimmer */
+@keyframes motora-shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+.skeleton {
+  background: linear-gradient(90deg, #eef1f6 25%, #e0e6ef 37%, #eef1f6 63%);
+  background-size: 800px 100%;
+  animation: motora-shimmer 1.4s ease infinite;
+}
+
+/* Line clamp helpers (for older browsers) */
+.clamp-1,
+.clamp-2,
+.clamp-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.clamp-1 {
+  -webkit-line-clamp: 1;
+}
+.clamp-2 {
+  -webkit-line-clamp: 2;
+}
+.clamp-3 {
+  -webkit-line-clamp: 3;
+}
+
+/* Hide scrollbars for swipe strips */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
 }

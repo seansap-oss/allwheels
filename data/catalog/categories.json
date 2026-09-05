@@ -1,0 +1,46 @@
+[
+  { "id": "cat-cars", "slug": "cars", "name": "Cars", "icon": "car", "sort": 1,
+    "subcategories": [
+      { "id": "c-hatch", "slug": "hatchback", "name": "Hatchback" },
+      { "id": "c-sedan", "slug": "sedan", "name": "Sedan" },
+      { "id": "c-suv", "slug": "suv", "name": "SUV" },
+      { "id": "c-mpv", "slug": "mpv", "name": "MPV / MUV" },
+      { "id": "c-lux", "slug": "luxury", "name": "Luxury" },
+      { "id": "c-pick", "slug": "pickup", "name": "Pickup" },
+      { "id": "c-van", "slug": "van", "name": "Van" },
+      { "id": "c-ev", "slug": "electric-car", "name": "Electric" }
+    ] },
+  { "id": "cat-moto", "slug": "motorcycles", "name": "Motorcycles", "icon": "bike", "sort": 2,
+    "subcategories": [
+      { "id": "m-com", "slug": "commuter", "name": "Commuter" },
+      { "id": "m-cru", "slug": "cruiser", "name": "Cruiser" },
+      { "id": "m-spt", "slug": "sports", "name": "Sports" },
+      { "id": "m-adv", "slug": "adventure", "name": "Adventure" },
+      { "id": "m-cls", "slug": "classic", "name": "Classic / Retro" },
+      { "id": "m-evm", "slug": "electric-motorcycle", "name": "Electric Motorcycle" }
+    ] },
+  { "id": "cat-scoot", "slug": "scooters", "name": "Scooters", "icon": "scooter", "sort": 3,
+    "subcategories": [
+      { "id": "s-pet", "slug": "petrol-scooter", "name": "Petrol Scooter" },
+      { "id": "s-max", "slug": "maxi-scooter", "name": "Maxi Scooter" },
+      { "id": "s-evs", "slug": "electric-scooter", "name": "Electric Scooter" }
+    ] },
+  { "id": "cat-elec", "slug": "electric", "name": "Electric", "icon": "zap", "sort": 4, "subcategories": [] },
+  { "id": "cat-comm", "slug": "commercial", "name": "Commercial", "icon": "truck", "sort": 5,
+    "subcategories": [
+      { "id": "v-pick", "slug": "pickup", "name": "Pickup" },
+      { "id": "v-mini", "slug": "mini-truck", "name": "Mini Truck" },
+      { "id": "v-lcv", "slug": "lcv", "name": "Light Commercial" },
+      { "id": "v-bus", "slug": "bus", "name": "Bus" },
+      { "id": "v-trc", "slug": "tractor", "name": "Tractor" }
+    ] },
+  { "id": "cat-bic", "slug": "bicycles", "name": "Bicycles", "icon": "bicycle", "sort": 6,
+    "subcategories": [
+      { "id": "b-road", "slug": "road", "name": "Road" },
+      { "id": "b-mtb", "slug": "mountain", "name": "Mountain" },
+      { "id": "b-hyb", "slug": "hybrid", "name": "Hybrid" },
+      { "id": "b-city", "slug": "city", "name": "City" },
+      { "id": "b-ebk", "slug": "electric-bicycle", "name": "Electric Bicycle" },
+      { "id": "b-kids", "slug": "kids", "name": "Kids" }
+    ] }
+]

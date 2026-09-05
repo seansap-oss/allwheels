@@ -1,0 +1,20 @@
+[
+  { "id": "md-scorpio", "slug": "scorpio-n", "manufacturerId": "m-mahindra", "name": "Scorpio N", "categorySlug": "cars", "bodyTypes": ["suv"], "status": "ACTIVE" },
+  { "id": "md-thar", "slug": "thar", "manufacturerId": "m-mahindra", "name": "Thar", "categorySlug": "cars", "bodyTypes": ["suv"], "status": "ACTIVE" },
+  { "id": "md-swift", "slug": "swift", "manufacturerId": "m-maruti", "name": "Swift", "categorySlug": "cars", "bodyTypes": ["hatchback"], "status": "ACTIVE" },
+  { "id": "md-creta", "slug": "creta", "manufacturerId": "m-hyundai", "name": "Creta", "categorySlug": "cars", "bodyTypes": ["suv"], "status": "ACTIVE" },
+  { "id": "md-nexon", "slug": "nexon", "manufacturerId": "m-tata", "name": "Nexon", "categorySlug": "cars", "bodyTypes": ["suv"], "status": "ACTIVE" },
+  { "id": "md-classic350", "slug": "classic-350", "manufacturerId": "m-re", "name": "Classic 350", "categorySlug": "motorcycles", "bodyTypes": ["classic"], "status": "ACTIVE" },
+  { "id": "md-himalayan", "slug": "himalayan-450", "manufacturerId": "m-re", "name": "Himalayan 450", "categorySlug": "motorcycles", "bodyTypes": ["adventure"], "status": "ACTIVE" },
+  { "id": "md-hunter", "slug": "hunter-350", "manufacturerId": "m-re", "name": "Hunter 350", "categorySlug": "motorcycles", "bodyTypes": ["classic"], "status": "ACTIVE" },
+  { "id": "md-splendor", "slug": "splendor-plus", "manufacturerId": "m-hero", "name": "Splendor Plus", "categorySlug": "motorcycles", "bodyTypes": ["commuter"], "status": "ACTIVE" },
+  { "id": "md-pulsar", "slug": "pulsar-n250", "manufacturerId": "m-bajaj", "name": "Pulsar N250", "categorySlug": "motorcycles", "bodyTypes": ["sports"], "status": "ACTIVE" },
+  { "id": "md-duke200", "slug": "200-duke", "manufacturerId": "m-ktm", "name": "200 Duke", "categorySlug": "motorcycles", "bodyTypes": ["sports"], "status": "ACTIVE" },
+  { "id": "md-activa", "slug": "activa-6g", "manufacturerId": "m-honda-m", "name": "Activa 6G", "categorySlug": "scooters", "bodyTypes": ["petrol-scooter"], "status": "ACTIVE" },
+  { "id": "md-jupiter", "slug": "jupiter-125", "manufacturerId": "m-tvs", "name": "Jupiter 125", "categorySlug": "scooters", "bodyTypes": ["petrol-scooter"], "status": "ACTIVE" },
+  { "id": "md-s1pro", "slug": "s1-pro", "manufacturerId": "m-ola", "name": "S1 Pro", "categorySlug": "scooters", "bodyTypes": ["electric-scooter"], "status": "ACTIVE" },
+  { "id": "md-450x", "slug": "450x", "manufacturerId": "m-ather", "name": "450X", "categorySlug": "scooters", "bodyTypes": ["electric-scooter"], "status": "ACTIVE" },
+  { "id": "md-dost", "slug": "dost-plus", "manufacturerId": "m-ashok", "name": "Dost Plus", "categorySlug": "commercial", "bodyTypes": ["lcv"], "status": "ACTIVE" },
+  { "id": "md-sprint", "slug": "sprint", "manufacturerId": "m-herocyc", "name": "Sprint", "categorySlug": "bicycles", "bodyTypes": ["city"], "status": "ACTIVE" },
+  { "id": "md-target", "slug": "target", "manufacturerId": "m-firefox", "name": "Target", "categorySlug": "bicycles", "bodyTypes": ["mountain"], "status": "ACTIVE" }
+]

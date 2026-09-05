@@ -1,0 +1,21 @@
+{
+  "packages": [
+    { "id": "pkg-free", "slug": "free", "name": "Free", "price": 0, "durationDays": 30, "maxPhotos": 5, "videoAllowed": false, "featured": false, "searchBoost": false, "active": true },
+    { "id": "pkg-single", "slug": "single-100", "name": "Single Listing", "price": 100, "durationDays": 30, "maxPhotos": 12, "videoAllowed": true, "featured": false, "searchBoost": false, "active": true },
+    { "id": "pkg-featured", "slug": "featured", "name": "Featured", "price": 299, "durationDays": 30, "maxPhotos": 20, "videoAllowed": true, "featured": true, "searchBoost": true, "active": true },
+    { "id": "pkg-premium", "slug": "premium", "name": "Premium", "price": 499, "durationDays": 45, "maxPhotos": 30, "videoAllowed": true, "featured": true, "searchBoost": true, "active": true }
+  ],
+  "settings": {
+    "siteName": "Motora",
+    "supportEmail": "support@motora.com",
+    "supportPhone": "+911800000000",
+    "whatsapp": "+919800000000",
+    "address": "Motora Technologies Pvt. Ltd., Bengaluru, Karnataka, India",
+    "currency": "INR",
+    "freeListingThreshold": 30000,
+    "freeListingsPerUser": 2,
+    "listingDurationDays": 30,
+    "maxPhotos": 30,
+    "maxVideoSeconds": 60
+  }
+}

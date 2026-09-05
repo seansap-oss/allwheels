@@ -1,0 +1,156 @@
+[
+  {
+    "id": "l1", "slug": "2023-royal-enfield-classic-350-imphal-10001",
+    "title": "2023 Royal Enfield Classic 350 Halcyon Green",
+    "categorySlug": "motorcycles", "subcategorySlug": "classic",
+    "manufacturerId": "m-re", "manufacturerName": "Royal Enfield",
+    "modelId": "md-classic350", "modelName": "Classic 350",
+    "variantId": null, "variantName": "Halcyon Green",
+    "year": 2023, "price": 178000, "condition": "USED",
+    "sellerType": "PRIVATE", "sellerId": "u-seller1", "sellerName": "Thangjam R.",
+    "dealerId": null, "city": "Imphal", "state": "Manipur", "locality": "Uripok",
+    "kms": 8500, "fuel": "PETROL", "transmission": "MANUAL", "engineCc": 349,
+    "color": "Green", "featured": true, "verifiedSeller": true, "status": "ACTIVE",
+    "views": 1243, "saves": 86, "createdAt": "2026-08-20T10:00:00Z", "updatedAt": "2026-08-28T10:00:00Z",
+    "description": "Single owner Classic 350 in excellent condition. Always serviced at authorised centre. New tyres, zero-accident, all papers clear with Manipur registration.",
+    "media": [
+      { "id": "l1m1", "url": "/images/seed/bike-1.svg", "thumbUrl": "/images/seed/bike-1.svg", "kind": "IMAGE", "sort": 1 },
+      { "id": "l1m2", "url": "/images/seed/bike-2.svg", "thumbUrl": "/images/seed/bike-2.svg", "kind": "IMAGE", "sort": 2 }
+    ],
+    "specs": { "Power": "20.2 PS", "Torque": "27 Nm", "ABS": "Dual channel", "Owners": 1 }
+  },
+  {
+    "id": "l2", "slug": "2022-mahindra-scorpio-n-delhi-10002",
+    "title": "2022 Mahindra Scorpio N Z8L Diesel AT 4WD",
+    "categorySlug": "cars", "subcategorySlug": "suv",
+    "manufacturerId": "m-mahindra", "manufacturerName": "Mahindra",
+    "modelId": "md-scorpio", "modelName": "Scorpio N",
+    "variantId": null, "variantName": "Z8L Diesel AT 4WD",
+    "year": 2022, "price": 2150000, "condition": "USED",
+    "sellerType": "DEALER", "sellerId": "u-dealer1", "sellerName": "Imphal Motors",
+    "dealerId": "d1", "city": "New Delhi", "state": "Delhi", "locality": "Karol Bagh",
+    "kms": 32000, "fuel": "DIESEL", "transmission": "AUTOMATIC", "engineCc": 2198,
+    "color": "Black", "featured": true, "verifiedSeller": true, "status": "ACTIVE",
+    "views": 3421, "saves": 210, "createdAt": "2026-08-18T10:00:00Z", "updatedAt": "2026-08-29T10:00:00Z",
+    "description": "Top-end Z8L diesel automatic 4WD. Company maintained, full service history, insurance valid. Finance and exchange available.",
+    "media": [
+      { "id": "l2m1", "url": "/images/seed/car-1.svg", "thumbUrl": "/images/seed/car-1.svg", "kind": "IMAGE", "sort": 1 },
+      { "id": "l2m2", "url": "/images/seed/car-2.svg", "thumbUrl": "/images/seed/car-2.svg", "kind": "IMAGE", "sort": 2 }
+    ],
+    "specs": { "Power": "172 PS", "Drive": "4WD", "Seats": 7, "Owners": 1 }
+  },
+  {
+    "id": "l3", "slug": "2024-ather-450x-bengaluru-10003",
+    "title": "2024 Ather 450X Gen 4 HR",
+    "categorySlug": "scooters", "subcategorySlug": "electric-scooter",
+    "manufacturerId": "m-ather", "manufacturerName": "Ather",
+    "modelId": "md-450x", "modelName": "450X",
+    "variantId": null, "variantName": "450X HR",
+    "year": 2024, "price": 142000, "condition": "USED",
+    "sellerType": "PRIVATE", "sellerId": "u-seller2", "sellerName": "Priya S.",
+    "dealerId": null, "city": "Bengaluru", "state": "Karnataka", "locality": "HSR Layout",
+    "kms": 4200, "fuel": "ELECTRIC", "transmission": "AUTOMATIC", "engineCc": null,
+    "color": "White", "featured": false, "verifiedSeller": true, "status": "ACTIVE",
+    "views": 876, "saves": 54, "createdAt": "2026-08-25T10:00:00Z", "updatedAt": "2026-08-30T10:00:00Z",
+    "description": "Barely used 450X with 105 km true range. Battery health 100%, Rizta charger included. Selling due to relocation.",
+    "media": [
+      { "id": "l3m1", "url": "/images/seed/scooter-1.svg", "thumbUrl": "/images/seed/scooter-1.svg", "kind": "IMAGE", "sort": 1 }
+    ],
+    "specs": { "Range": "105 km", "Top speed": "90 km/h", "Charging": "0-80% in 4h" }
+  },
+  {
+    "id": "l4", "slug": "2021-hero-splendor-plus-imphal-10004",
+    "title": "2021 Hero Splendor Plus - First Owner",
+    "categorySlug": "motorcycles", "subcategorySlug": "commuter",
+    "manufacturerId": "m-hero", "manufacturerName": "Hero",
+    "modelId": "md-splendor", "modelName": "Splendor Plus",
+    "variantId": null, "variantName": "Self Start i3S",
+    "year": 2021, "price": 62000, "condition": "USED",
+    "sellerType": "PRIVATE", "sellerId": "u-seller1", "sellerName": "Thangjam R.",
+    "dealerId": null, "city": "Imphal", "state": "Manipur", "locality": "Singjamei",
+    "kms": 21000, "fuel": "PETROL", "transmission": "MANUAL", "engineCc": 97,
+    "color": "Black", "featured": false, "verifiedSeller": false, "status": "ACTIVE",
+    "views": 432, "saves": 12, "createdAt": "2026-08-22T10:00:00Z", "updatedAt": "2026-08-27T10:00:00Z",
+    "description": "Daily runner, mileage 70+ kmpl. New chain-sprocket, serviced last month. Price slightly negotiable.",
+    "media": [
+      { "id": "l4m1", "url": "/images/seed/bike-2.svg", "thumbUrl": "/images/seed/bike-2.svg", "kind": "IMAGE", "sort": 1 }
+    ],
+    "specs": { "Mileage": "70 kmpl", "Owners": 1 }
+  },
+  {
+    "id": "l5", "slug": "2023-ktm-200-duke-pune-10005",
+    "title": "2023 KTM 200 Duke - Showroom Condition",
+    "categorySlug": "motorcycles", "subcategorySlug": "sports",
+    "manufacturerId": "m-ktm", "manufacturerName": "KTM",
+    "modelId": "md-duke200", "modelName": "200 Duke",
+    "variantId": null, "variantName": "2023",
+    "year": 2023, "price": 168000, "condition": "USED",
+    "sellerType": "DEALER", "sellerId": "u-dealer1", "sellerName": "Imphal Motors",
+    "dealerId": "d1", "city": "Pune", "state": "Maharashtra", "locality": "Baner",
+    "kms": 9800, "fuel": "PETROL", "transmission": "MANUAL", "engineCc": 199,
+    "color": "Orange", "featured": false, "verifiedSeller": true, "status": "ACTIVE",
+    "views": 1502, "saves": 98, "createdAt": "2026-08-15T10:00:00Z", "updatedAt": "2026-08-26T10:00:00Z",
+    "description": "Dealer-certified 200 Duke with 6-month engine warranty. All services at KTM centre. Exchange facility available.",
+    "media": [
+      { "id": "l5m1", "url": "/images/seed/bike-1.svg", "thumbUrl": "/images/seed/bike-1.svg", "kind": "IMAGE", "sort": 1 }
+    ],
+    "specs": { "Power": "25 PS", "ABS": "Dual channel", "Owners": 1 }
+  },
+  {
+    "id": "l6", "slug": "2025-firefox-target-mumbai-10006",
+    "title": "2025 Firefox Target 29er MTB",
+    "categorySlug": "bicycles", "subcategorySlug": "mountain",
+    "manufacturerId": "m-firefox", "manufacturerName": "Firefox",
+    "modelId": "md-target", "modelName": "Target",
+    "variantId": null, "variantName": "29er 21 Speed",
+    "year": 2025, "price": 18500, "condition": "NEW",
+    "sellerType": "DEALER", "sellerId": "u-dealer2", "sellerName": "Cycle World",
+    "dealerId": "d2", "city": "Mumbai", "state": "Maharashtra", "locality": "Andheri",
+    "kms": 0, "fuel": null, "transmission": null, "engineCc": null,
+    "color": "Blue", "featured": false, "verifiedSeller": true, "status": "ACTIVE",
+    "views": 210, "saves": 9, "createdAt": "2026-08-28T10:00:00Z", "updatedAt": "2026-08-31T10:00:00Z",
+    "description": "Brand new 29er MTB with Shimano 21-speed, dual disc brakes and front suspension. Free first service and helmet.",
+    "media": [
+      { "id": "l6m1", "url": "/images/seed/cycle-1.svg", "thumbUrl": "/images/seed/cycle-1.svg", "kind": "IMAGE", "sort": 1 }
+    ],
+    "specs": { "Wheel": "29 inch", "Gears": "21 speed", "Brakes": "Dual disc" }
+  },
+  {
+    "id": "l7", "slug": "2020-maruti-swift-chennai-10007",
+    "title": "2020 Maruti Swift VXi - Single Owner",
+    "categorySlug": "cars", "subcategorySlug": "hatchback",
+    "manufacturerId": "m-maruti", "manufacturerName": "Maruti Suzuki",
+    "modelId": "md-swift", "modelName": "Swift",
+    "variantId": null, "variantName": "VXi",
+    "year": 2020, "price": 565000, "condition": "USED",
+    "sellerType": "PRIVATE", "sellerId": "u-seller2", "sellerName": "Priya S.",
+    "dealerId": null, "city": "Chennai", "state": "Tamil Nadu", "locality": "Velachery",
+    "kms": 45000, "fuel": "PETROL", "transmission": "MANUAL", "engineCc": 1197,
+    "color": "Red", "featured": false, "verifiedSeller": false, "status": "ACTIVE",
+    "views": 987, "saves": 41, "createdAt": "2026-08-12T10:00:00Z", "updatedAt": "2026-08-24T10:00:00Z",
+    "description": "Single-owner Swift, non-accidental, TN registered. AC, power steering, music system all working. Insurance till next year.",
+    "media": [
+      { "id": "l7m1", "url": "/images/seed/car-2.svg", "thumbUrl": "/images/seed/car-2.svg", "kind": "IMAGE", "sort": 1 }
+    ],
+    "specs": { "Mileage": "22 kmpl", "Owners": 1, "Seats": 5 }
+  },
+  {
+    "id": "l8", "slug": "2024-ola-s1-pro-jaipur-10008",
+    "title": "2024 Ola S1 Pro Gen 2",
+    "categorySlug": "scooters", "subcategorySlug": "electric-scooter",
+    "manufacturerId": "m-ola", "manufacturerName": "Ola Electric",
+    "modelId": "md-s1pro", "modelName": "S1 Pro",
+    "variantId": null, "variantName": "Gen 2",
+    "year": 2024, "price": 118000, "condition": "USED",
+    "sellerType": "PRIVATE", "sellerId": "u-seller1", "sellerName": "Thangjam R.",
+    "dealerId": null, "city": "Jaipur", "state": "Rajasthan", "locality": "Malviya Nagar",
+    "kms": 6500, "fuel": "ELECTRIC", "transmission": "AUTOMATIC", "engineCc": null,
+    "color": "Black", "featured": false, "verifiedSeller": false, "status": "PENDING",
+    "views": 55, "saves": 3, "createdAt": "2026-09-01T10:00:00Z", "updatedAt": "2026-09-02T10:00:00Z",
+    "description": "Ola S1 Pro Gen 2 with 195 km IDC range. Under warranty, free MoveOS updates. Awaiting moderation approval.",
+    "media": [
+      { "id": "l8m1", "url": "/images/seed/scooter-1.svg", "thumbUrl": "/images/seed/scooter-1.svg", "kind": "IMAGE", "sort": 1 }
+    ],
+    "specs": { "Range": "195 km IDC", "Top speed": "120 km/h" }
+  }
+]
