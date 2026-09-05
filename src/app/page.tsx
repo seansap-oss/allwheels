@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { HeroSearch } from "@/components/hero-search";
 import { ListingCard } from "@/components/listing-card";
 import { Container, SectionTitle } from "@/components/ui";
-import { activeListings, categories, getArticles, manufacturers, searchListings, seedDealers } from "@/lib/store";
+import { activeListings, categories, getArticles, manufacturers, searchListings, seedDealers, vehicleModels } from "@/lib/store";
 
 export const metadata: Metadata = {
   title: "Motora — Find your next ride",
@@ -129,12 +129,57 @@ export default function HomePage() {
         </Container>
       </section>
 
+      {/* POPULAR MAKES + BODY TYPES (quick-search style directory) */}
+      <section className="mt-12 bg-slate-50 py-10">
+        <Container>
+          <div className="grid gap-8 lg:grid-cols-2">
+            <div>
+              <SectionTitle kicker="Directory" title="Popular makes" sub="Every make opens its models — pick a model to see variants and live stock." />
+              <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+                {manufacturers.slice(0, 12).map((m) => {
+                  const cat = m.categorySlugs.includes("cars") ? "cars" : m.categorySlugs[0] ?? "cars";
+                  return (
+                    <li key={m.id}>
+                      <Link href={`/${cat}/${m.slug}`} className="flex h-12 items-center justify-between rounded-xl border border-slate-200 bg-white px-4 text-sm font-bold hover:border-motora-500 hover:text-motora-600">
+                        {m.name} <span aria-hidden="true">→</span>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+            <div>
+              <SectionTitle kicker="Directory" title="Shop by body type" sub="SUV, sedan, hatch, cruiser, adventure, e-scooter and more." />
+              <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+                {[
+                  ["SUV", "/search?category=cars&bodyType=suv", "🚙"],
+                  ["Sedan", "/search?category=cars&bodyType=sedan", "🚗"],
+                  ["Hatchback", "/search?category=cars&bodyType=hatchback", "🚗"],
+                  ["Cruiser", "/search?category=motorcycles&bodyType=cruiser", "🏍️"],
+                  ["Adventure", "/search?category=motorcycles&bodyType=adventure", "🏔️"],
+                  ["Sports", "/search?category=motorcycles&bodyType=sports", "🏁"],
+                  ["E-Scooter", "/search?category=scooters&bodyType=electric-scooter", "⚡"],
+                  ["Petrol Scooter", "/search?category=scooters&bodyType=petrol-scooter", "🛵"],
+                  ["Pickup", "/search?category=commercial&bodyType=pickup", "🛻"],
+                ].map(([label, href, emoji]) => (
+                  <li key={href}>
+                    <Link href={href} className="flex h-12 items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 text-sm font-bold hover:border-motora-500 hover:text-motora-600">
+                      <span aria-hidden="true">{emoji}</span> {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       {/* BRANDS */}
       <section className="mt-12">
         <Container>
-          <SectionTitle kicker="Catalogue" title="Popular brands" sub={`Backed by a master catalogue of ${manufacturers.length}+ manufacturers — sellers pick, never free-type.`} />
+          <SectionTitle kicker="Catalogue" title="All makes A–Z" sub={`Backed by a master catalogue of ${manufacturers.length} manufacturers and ${vehicleModels.length} models — sellers pick, never free-type.`} />
           <div className="flex flex-wrap gap-2">
-            {manufacturers.slice(0, 14).map((m) => (
+            {manufacturers.map((m) => (
               <Link key={m.id} href={`/search?make=${m.slug}`} className="rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-bold text-navy-950 hover:border-motora-500 hover:text-motora-600">
                 {m.name}
               </Link>

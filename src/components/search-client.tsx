@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ListingCard } from "@/components/listing-card";
+import { CascadeFilters } from "@/components/cascade-filters";
 import { EmptyState } from "@/components/ui";
 import { cxRecord } from "@/lib/utils";
 import type { Listing } from "@/lib/types";
@@ -27,7 +28,7 @@ const SORTS: [string, string][] = [
 export function SearchClient({ initial }: { initial: InitialSearch }) {
   const [sheetOpen, setSheetOpen] = useState(false);
   const f = initial.filters;
-  const activeCount = ["q", "make", "model", "city", "minPrice", "maxPrice", "condition", "sellerType", "fuel", "verifiedOnly"].filter(
+  const activeCount = ["q", "make", "model", "bodyType", "city", "minPrice", "maxPrice", "condition", "sellerType", "fuel", "verifiedOnly"].filter(
     (k) => f[k],
   ).length;
 
@@ -38,6 +39,12 @@ export function SearchClient({ initial }: { initial: InitialSearch }) {
         Keyword
         <input name="q" defaultValue={f.q ?? ""} placeholder="e.g. Classic 350" className="h-12 rounded-xl border border-slate-300 px-3 text-[16px] font-normal sm:text-sm" />
       </label>
+      <CascadeFilters
+        category={f.category ?? "cars"}
+        defaultMake={f.make ?? ""}
+        defaultModel={f.model ?? ""}
+        defaultBodyType={f.bodyType ?? ""}
+      />
       <div className="grid grid-cols-2 gap-3">
         <label className="flex flex-col gap-1 text-sm font-semibold">
           Min price
