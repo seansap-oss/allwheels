@@ -2,7 +2,7 @@
  * Caches: app shell, static assets, fonts, logos.
  * Never caches: auth, messages, payments, account pages, fresh listing data.
  */
-const VERSION = "motora-v1";
+const VERSION = "motora-v2";
 const SHELL = ["/", "/offline.html", "/manifest.webmanifest"];
 const NEVER = [/\/api\//, /\/messages/, /\/profile/, /\/admin/, /\/dealer\/dashboard/, /\/checkout/];
 

@@ -149,7 +149,7 @@ export function HeroSearch({ total }: { total: number }) {
     "h-12 w-full rounded-xl border border-slate-300 bg-white px-3 text-[16px] text-navy-950 sm:text-sm disabled:bg-slate-100 disabled:text-slate-400";
 
   return (
-    <div className="overflow-hidden rounded-xl bg-white text-navy-950 shadow-[0_24px_70px_-12px_rgba(0,0,0,0.55)] ring-1 ring-white/25">
+    <div className="overflow-hidden rounded-xl bg-white text-navy-950 shadow-[0_24px_60px_-16px_rgba(10,22,51,0.35)] ring-1 ring-navy-950/15">
       <div className="no-scrollbar flex gap-1 overflow-x-auto border-b border-slate-200 bg-slate-50 p-2" role="tablist" aria-label="Search categories">
         {TABS.map((t) => (
           <button

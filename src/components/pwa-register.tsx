@@ -13,8 +13,18 @@ export function PwaRegister() {
     window.addEventListener("online", on);
     window.addEventListener("offline", off);
 
+    // If a new service worker takes control (e.g. a stale cached page is
+    // open), reload once so the user always sees the current site.
+    let reloaded = false;
+    const onControl = () => {
+      if (reloaded) return;
+      reloaded = true;
+      window.location.reload();
+    };
+
     let reg: ServiceWorkerRegistration | null = null;
     if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.addEventListener("controllerchange", onControl);
       navigator.serviceWorker
         .register("/sw.js")
         .then((r) => {
@@ -35,6 +45,9 @@ export function PwaRegister() {
     return () => {
       window.removeEventListener("online", on);
       window.removeEventListener("offline", off);
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.removeEventListener("controllerchange", onControl);
+      }
       void reg;
     };
   }, []);

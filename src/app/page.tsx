@@ -29,20 +29,20 @@ export default function HomePage() {
 
   return (
     <>
-      {/* HERO */}
-      <section className="relative overflow-hidden bg-[#060b1f] text-white">
-        <div className="absolute inset-0 bg-[radial-gradient(1100px_480px_at_15%_-10%,#1a5fd033,transparent),radial-gradient(900px_420px_at_90%_10%,#f96a3e1f,transparent),linear-gradient(180deg,#060b1f_0%,#0a1633_55%,#0f2050_100%)]" aria-hidden="true" />
-        <div className="absolute inset-0 opacity-[0.14]" aria-hidden="true"
-          style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)", backgroundSize: "44px 44px", maskImage: "radial-gradient(700px 340px at 50% 0%, black, transparent)" }} />
-        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-teal-glow-400/70 to-transparent" aria-hidden="true" />
+      {/* HERO — retro photo paper */}
+      <section className="retro-paper relative overflow-hidden text-navy-950">
+        <div className="retro-grain pointer-events-none absolute inset-0 opacity-[0.16]" aria-hidden="true" />
+        <div className="pointer-events-none absolute inset-0" aria-hidden="true"
+          style={{ background: "radial-gradient(1000px 420px at 50% 120%, rgba(10,22,51,0.10), transparent)" }} />
+        <div className="absolute inset-x-0 top-0 h-[3px] bg-navy-950" aria-hidden="true" />
         <Container className="relative py-12 sm:py-20">
-          <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em] text-teal-glow-400">
-            <span className="h-1.5 w-1.5 rounded-full bg-teal-glow-400" aria-hidden="true" /> India&apos;s multi-category marketplace
+          <p className="inline-flex items-center gap-2 rounded-full border border-navy-950/20 bg-white/60 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em] text-navy-950">
+            <span className="h-1.5 w-1.5 rounded-full bg-coral-500" aria-hidden="true" /> India&apos;s multi-category marketplace
           </p>
           <h1 className="font-display mt-5 max-w-3xl text-[42px] font-bold leading-[1.02] sm:text-7xl">
             Find your next ride<span className="text-coral-500">.</span>
           </h1>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
             Cars, motorcycles, scooters, EVs, commercial vehicles and bicycles — all in one place.
           </p>
           <div className="mt-7 max-w-4xl">
@@ -56,13 +56,13 @@ export default function HomePage() {
               ["Activa", "/search?q=activa"],
               ["450X", "/search?q=450x"],
             ].map(([label, href]) => (
-              <Link key={href} href={href} className="rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 font-semibold text-slate-200 hover:border-white/40 hover:text-white">
+              <Link key={href} href={href} className="rounded-full border border-navy-950/20 bg-white/70 px-3.5 py-1.5 font-semibold text-navy-950 hover:border-navy-950 hover:bg-white">
                 {label}
               </Link>
             ))}
           </div>
         </Container>
-        <div className="absolute inset-x-0 bottom-0 h-px bg-white/10" aria-hidden="true" />
+        <div className="absolute inset-x-0 bottom-0 h-px bg-navy-950/15" aria-hidden="true" />
       </section>
 
       {/* BROWSE BY CATEGORY */}
